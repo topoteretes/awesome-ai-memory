@@ -2,7 +2,7 @@
 
 
 
-<h1 align="center"> 🔮 Awesome AI Memory <p align="center"> <a href="https://discord.gg/YOUR_COGNEE_DISCORD_LINK" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/YOUR_COGNEE_TWITTER_HANDLE" target="_blank"> <img src="https://img.shields.io/twitter/follow/YOUR_COGNEE_TWITTER_HANDLE.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://www.cognee.ai">Add cognee to your app</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/memory-lanscape.png" width="100%" alt="Chart of AI Memory Landscape" />
+<h1 align="center"> 🔮 Awesome AI Memory <p align="center"> <a href="https://discord.gg/YOUR_COGNEE_DISCORD_LINK" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/YOUR_COGNEE_TWITTER_HANDLE" target="_blank"> <img src="https://img.shields.io/twitter/follow/YOUR_COGNEE_TWITTER_HANDLE.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://www.cognee.ai"> cognee</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/memory-lanscape.png" width="100%" alt="Chart of AI Memory Landscape" />
 Welcome to our curated list of AI memory You can see the projects split across various dimensions
 
 1. Open-source projects
