@@ -20,5 +20,5 @@ Please open a pull request
 
 - **Browse examples in the Cognee Cookbook**
 - **Read our documentation**
-- **Contact us at [info@topoteretes.com](mailto:info@topoteretes.com) or join us on [Discord]([(https://discord.gg/m9KxxYWH])**
+- **Contact us at [info@topoteretes.com](mailto:info@topoteretes.com) or join us on [Discord]([https://discord.gg/m9KxxYWH])**
 - **Follow us on [Twitter](https://twitter.com/tricalt)**
