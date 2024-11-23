@@ -19,7 +19,6 @@ Please open a pull request
 
 [Check out Cognee – A semantic memory for AI Apps and Agents](https://github.com/topoteretes/cognee)
 
-- **Browse examples in the Cognee Cookbook**
-- **Read our documentation**
+- **Browse examples in the [Cognee QuickStart](https://topoteretes.github.io/cognee/quickstart/)**
 - **Contact us at [info@topoteretes.com](mailto:info@topoteretes.com) or join us on [Discord]([https://discord.gg/m9KxxYWH])**
 - **Follow us on [Twitter](https://twitter.com/tricalt)**
