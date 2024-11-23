@@ -5,7 +5,7 @@
 <h1 align="center"> Awesome AI Memory <p align="center"> <a href="https://discord.gg/m9KxxYWH" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/tricalt" target="_blank"> <img src="https://img.shields.io/twitter/follow/tricalt.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://github.com/topoteretes/cognee"> cognee</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/infographic_V3.png" width="100%" alt="Chart of AI Memory Landscape" />
 
 
-## Welcome to our curated list of AI memory 
+## Welcome to our curated list of AI memory tools
 You can see the projects split across various dimensions
 1. Open-source projects vs Closed-source projects and companies
 2. Graph, Vector, or Both
