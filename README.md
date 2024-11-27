@@ -24,6 +24,10 @@ Please open a pull request
 - **Follow us on [Twitter](https://twitter.com/tricalt)**
 
 
+
+
+
+
 | Name                          | URL                                      | Open / Close       | GitHub URL                                      | Category        | Storage       |
 |-------------------------------|------------------------------------------|--------------------|-------------------------------------------------|-----------------|---------------|
 | cognee                        | https://www.cognee.ai/                   | Managed, Open source | https://github.com/topoteretes/cognee         | Memory Tool     | Graph, Vector |
@@ -51,11 +55,10 @@ Please open a pull request
 | Jina AI                       | https://jina.ai/                         | Open source        | https://github.com/jina-ai                      | Optimizer       | Vector        |
 | Haystack                      | https://haystack.deepset.ai/             | Open source        | https://github.com/deepset-ai                   | LLM Framework   | Vector        |
 | Rasa                          | https://rasa.com/                        | Open source        | https://github.com/RasaHQ/                      | LLM Framework   | Graph, Vector |
-| cognee                        | cognee.ai                                | Open source        | https://github.com/topoteretes/cognee           | Memory Tool     | Graph, Vector |
 | NebulaGraph                   | https://www.nebula-graph.io/             | Open source        | https://github.com/vesoft-inc/nebula            | Storage         | Graph         |
 | Neon                          | https://neon.tech/                       | Open source        | https://github.com/neondatabase/neon            | Storage         | Vector        |
 | WhyHowAI                      | https://www.whyhow.ai/                   | Closed             | https://github.com/whyhow-ai                    | Memory Tool     | Graph         |
-| Graphlit                      | graphlit.com                             | Closed             |                                                 | Memory Tool     | Graph, Vector |
+| Graphlit                      | https://graphlit.com                     | Closed             |                                                 | Memory Tool     | Graph, Vector |
 | ragie.ai                      | ragie.ai                                 | Closed             | https://github.com/ragieai                      | Memory Tool     | Vector        |
 | Ontotext                      | https://www.ontotext.com/                | Closed             | https://github.com/Ontotext-AD                  | Memory Tool     | Graph         |
 | SID                           | https://www.sid.ai/                      | Closed             |                                                 | Memory Tool     | Vector        |
