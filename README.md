@@ -2,7 +2,7 @@
 
 
 
-<h1 align="center"> Awesome AI Memory <p align="center"> <a href="https://discord.gg/m9KxxYWH" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/tricalt" target="_blank"> <img src="https://img.shields.io/twitter/follow/tricalt.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://github.com/topoteretes/cognee"> cognee</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/infographic_V5.png" width="100%" alt="Chart of AI Memory Landscape" />
+<h1 align="center"> Awesome AI Memory <p align="center"> <a href="https://discord.gg/m9KxxYWH" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/tricalt" target="_blank"> <img src="https://img.shields.io/twitter/follow/tricalt.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://github.com/topoteretes/cognee"> cognee</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/infographic_V6.png" width="100%" alt="Chart of AI Memory Landscape" />
 
 
 ## Welcome to our curated list of AI memory tools
@@ -56,6 +56,7 @@ Please open a pull request
 | Haystack                      | https://haystack.deepset.ai/             | Open source        | https://github.com/deepset-ai                   | LLM Framework   | Vector        |
 | Rasa                          | https://rasa.com/                        | Open source        | https://github.com/RasaHQ/                      | LLM Framework   | Graph, Vector |
 | NebulaGraph                   | https://www.nebula-graph.io/             | Open source        | https://github.com/vesoft-inc/nebula            | Storage         | Graph         |
+| Vanna.AI                          | https://vanna.ai/                       | Open source        | https://github.com/vanna-ai/vanna            | Memory Tool         | Vector        |
 | Neon                          | https://neon.tech/                       | Open source        | https://github.com/neondatabase/neon            | Storage         | Vector        |
 | WhyHowAI                      | https://www.whyhow.ai/                   | Closed             | https://github.com/whyhow-ai                    | Memory Tool     | Graph         |
 | Graphlit                      | https://graphlit.com                     | Closed             |                                                 | Memory Tool     | Graph, Vector |
