@@ -43,6 +43,7 @@ Please open a pull request
 | Prometheus                    | https://prometheus.io/                   | Open source        | https://github.com/prometheus                   | Memory Tool     | Graph         |
 | DSPy                          | https://dspy.ai/                         | Open source        | https://github.com/stanfordnlp/dspy             | Optimizer       | Vector        |
 | Neo4j                         | https://neo4j.com/                       | Managed, Open source | https://github.com/neo4j                        | Storage         | Graph         |
+| FalkorDB                      | https://www.falkordb.com/                | Open source          | https://github.com/FalkorDB/falkordb            | Storage         | Graph         |
 | HybridAGI                     | https://synalinks.github.io/documentation/ | Open source        | https://github.com/SynaLinks/HybridAGI          | Memory Tool     | Graph, Vector |
 | txtai                         | https://neuml.github.io/txtai/           | Open source        | https://github.com/neuml/txtai                  | Memory Tool     | Vector        |
 | chroma                        | https://www.trychroma.com/               | Open source        | https://github.com/chroma-core/chroma           | Storage         | Vector        |
