@@ -1,0 +1,42 @@
+name: analytics | Push Awesome AI Memory GitHub Data to PostHog
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  push-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests posthog
+
+      - name: Run the PostHog Push Script
+        # Set environment variables needed for the script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
+          POSTHOG_HOST: ${{ secrets.POSTHOG_HOST }} # If not set, will default in script
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          echo "Current working directory:"
+          pwd
+          echo "Listing files:"
+          ls -la
+          echo "Changing to tools directory..."
+          cd tools
+          echo "Listing files in tools:"
+          ls -la
+          python push_to_posthog.py
