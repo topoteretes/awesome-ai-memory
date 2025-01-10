@@ -2,7 +2,7 @@
 
 
 
-<h1 align="center"> Awesome AI Memory <p align="center"> <a href="https://discord.gg/m9KxxYWH" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/tricalt" target="_blank"> <img src="https://img.shields.io/twitter/follow/tricalt.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://github.com/topoteretes/cognee"> cognee</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/infographic_V6.png" width="100%" alt="Chart of AI Memory Landscape" />
+<h1 align="center"> Awesome AI Memory <p align="center"> <a href="https://discord.gg/tV7pr5XSj7" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/tricalt" target="_blank"> <img src="https://img.shields.io/twitter/follow/tricalt.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://github.com/topoteretes/cognee"> cognee</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/infographic_V6.png" width="100%" alt="Chart of AI Memory Landscape" />
 
 
 ## Welcome to our curated list of AI memory tools
@@ -72,3 +72,4 @@ Please open a pull request
 | AllegroGraph                  | https://allegrograph.com/                | Closed             |                                                 | Memory Tool     | Graph         |
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
+| llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
