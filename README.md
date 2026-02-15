@@ -45,6 +45,7 @@ Please open a pull request
 | Neo4j                         | https://neo4j.com/                       | Managed, Open source | https://github.com/neo4j                        | Storage         | Graph         |
 | FalkorDB                      | https://www.falkordb.com/                | Open source          | https://github.com/FalkorDB/falkordb            | Storage         | Graph         |
 | HybridAGI                     | https://synalinks.github.io/documentation/ | Open source        | https://github.com/SynaLinks/HybridAGI          | Memory Tool     | Graph, Vector |
+| shodh-memory                  | https://github.com/varun29ankuS/shodh-memory | Open source        | https://github.com/varun29ankuS/shodh-memory    | Memory Tool     | Graph, Vector |
 | txtai                         | https://neuml.github.io/txtai/           | Open source        | https://github.com/neuml/txtai                  | Memory Tool     | Vector        |
 | chroma                        | https://www.trychroma.com/               | Open source        | https://github.com/chroma-core/chroma           | Storage         | Vector        |
 | LangChain                     | https://www.langchain.com/               | Open source        | https://github.com/langchain-ai/langchain       | LLM Framework   | Vector        |
