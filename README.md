@@ -37,6 +37,7 @@ Please open a pull request
 | Memary                        | https://finetune.dev/                    | Open source        | https://github.com/kingjulio8238/Memary         | Memory Tool     | Graph         |
 | BaseAI (from Langbase) - Memory | https://langbase.com/docs/memory        | Managed, Open source | https://github.com/LangbaseInc/baseai           | Memory Tool     | Vector        |
 | BondAI                        | https://bondai.dev/docs/agent-memory/    | Open source        | https://github.com/krohling/bondai              | Memory Tool     | Vector        |
+| Autohand Code CLI             | https://www.autohand.ai/code/            | Open source        | https://github.com/autohandai/code-cli          | Memory Tool     | Vector        |
 | MemGPT (from Letta)           | https://memgpt.ai/                       | Managed, Open source | https://github.com/cpacker/MemGPT               | Memory Tool     | Graph, Vector |
 | GraphRAG (from Microsoft)     | https://microsoft.github.io/graphrag/    | Open source        | https://github.com/microsoft/graphrag           | Memory Tool     | Graph, Vector |
 | Llama index                   | https://www.llamaindex.ai/               | Managed, Open source | https://github.com/run-llama/llama_index        | LLM Framework   | Graph, Vector |
