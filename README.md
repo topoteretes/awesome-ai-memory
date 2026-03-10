@@ -72,4 +72,5 @@ Please open a pull request
 | AllegroGraph                  | https://allegrograph.com/                | Closed             |                                                 | Memory Tool     | Graph         |
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
+| Lightning Memory               | https://github.com/singularityjason/lightning-memory | Open source | https://github.com/singularityjason/lightning-memory | Memory Tool | SQLite (FTS5) |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
