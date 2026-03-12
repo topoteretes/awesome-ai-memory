@@ -39,6 +39,7 @@ Please open a pull request
 | BondAI                        | https://bondai.dev/docs/agent-memory/    | Open source        | https://github.com/krohling/bondai              | Memory Tool     | Vector        |
 | MemGPT (from Letta)           | https://memgpt.ai/                       | Managed, Open source | https://github.com/cpacker/MemGPT               | Memory Tool     | Graph, Vector |
 | GraphRAG (from Microsoft)     | https://microsoft.github.io/graphrag/    | Open source        | https://github.com/microsoft/graphrag           | Memory Tool     | Graph, Vector |
+| Mengram                       | https://mengram.io/                      | Open source        | https://github.com/alibaizhanov/mengram         | Memory Tool     | Graph, Vector |
 | Llama index                   | https://www.llamaindex.ai/               | Managed, Open source | https://github.com/run-llama/llama_index        | LLM Framework   | Graph, Vector |
 | Prometheus                    | https://prometheus.io/                   | Open source        | https://github.com/prometheus                   | Memory Tool     | Graph         |
 | DSPy                          | https://dspy.ai/                         | Open source        | https://github.com/stanfordnlp/dspy             | Optimizer       | Vector        |
