@@ -73,3 +73,4 @@ Please open a pull request
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
+| NeverOnce                     | https://github.com/WeberG619/neveronce   | Open source        | https://github.com/WeberG619/neveronce          | Memory Tool     | Key-Value     |
