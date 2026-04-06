@@ -5,6 +5,7 @@
 <h1 align="center"> Awesome AI Memory <p align="center"> <a href="https://discord.gg/tV7pr5XSj7" target="_blank"> <img src="https://img.shields.io/static/v1?label=Join&message=discord!&color=mediumslateblue"> </a> <a href="https://twitter.com/tricalt" target="_blank"> <img src="https://img.shields.io/twitter/follow/tricalt.svg?logo=twitter"> </a> </p> </h1> <h3 align="center"> Add <a href="https://github.com/topoteretes/cognee"> cognee</a> to your AI App </h3> <h5 align="center">🌟 <img src="assets/infographic_v7.png" width="100%" alt="Chart of AI Memory Landscape" />
 
 
+- [guardian-agent-prompts](https://github.com/milkomida77/guardian-agent-prompts) - 49 production-tested AI agent system prompts with knowledge graph memory integration for persistent multi-agent coordination. MIT licensed.
 ## Welcome to our curated list of AI memory tools
 You can see the projects split across various dimensions
 1. Open-source projects vs Closed-source projects and companies
