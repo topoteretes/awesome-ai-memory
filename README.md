@@ -73,3 +73,4 @@ Please open a pull request
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
+| Agent Brain                   | https://github.com/kaderosio/agent-brain | Open source        | https://github.com/kaderosio/agent-brain        | Memory Tool     | Vector        |
