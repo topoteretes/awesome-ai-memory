@@ -32,6 +32,7 @@ Please open a pull request
 |-------------------------------|------------------------------------------|--------------------|-------------------------------------------------|-----------------|---------------|
 | cognee                        | https://www.cognee.ai/                   | Managed, Open source | https://github.com/topoteretes/cognee         | Memory Tool     | Graph, Vector |
 | mem0 (mem zero)               | https://mem0.ai/                         | Managed, Open source | https://github.com/mem0ai/mem0                  | Memory Tool     | Graph, Vector |
+| Mnemory                       |                                          | Open source        | https://github.com/fpytloun/mnemory             | Memory Tool     | Vector        |
 | Zep AI                        | https://www.getzep.com/                  | Managed, Open source | https://github.com/getzep/zep                   | Memory Tool     | Graph, Vector |
 | memonto                       |                                          | Open source        | https://github.com/shihanwan/memonto            | Memory Tool     | Graph         |
 | Memary                        | https://finetune.dev/                    | Open source        | https://github.com/kingjulio8238/Memary         | Memory Tool     | Graph         |
