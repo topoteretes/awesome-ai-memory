@@ -66,6 +66,7 @@ Please open a pull request
 | WhyHowAI                      | https://www.whyhow.ai/                   | Closed             | https://github.com/whyhow-ai                    | Memory Tool     | Graph         |
 | Graphlit                      | https://graphlit.com                     | Closed             |                                                 | Memory Tool     | Graph, Vector |
 | ragie.ai                      | ragie.ai                                 | Closed             | https://github.com/ragieai                      | Memory Tool     | Vector        |
+| Remio                         | https://remio.ai/                        | Closed             |                                                 | Memory Tool     | Vector        |
 | Ontotext                      | https://www.ontotext.com/                | Closed             | https://github.com/Ontotext-AD                  | Memory Tool     | Graph         |
 | SID                           | https://www.sid.ai/                      | Closed             |                                                 | Memory Tool     | Vector        |
 | vectara                       | https://www.vectara.com/                 | Closed             |                                                 | Storage         | Vector        |
