@@ -32,7 +32,9 @@ Please open a pull request
 |-------------------------------|------------------------------------------|--------------------|-------------------------------------------------|-----------------|---------------|
 | cognee                        | https://www.cognee.ai/                   | Managed, Open source | https://github.com/topoteretes/cognee         | Memory Tool     | Graph, Vector |
 | mem0 (mem zero)               | https://mem0.ai/                         | Managed, Open source | https://github.com/mem0ai/mem0                  | Memory Tool     | Graph, Vector |
+| MemClaw                       | https://memclaw.net/                     | Managed, Open source | https://github.com/caura-ai/caura-memclaw     | Memory Tool       | Graph, Vector |
 | Zep AI                        | https://www.getzep.com/                  | Managed, Open source | https://github.com/getzep/zep                   | Memory Tool     | Graph, Vector |
+| Mengram                       | https://mengram.io/                      | Managed, Open source | https://github.com/alibaizhanov/mengram         | Memory Tool     | Graph, Vector |
 | memonto                       |                                          | Open source        | https://github.com/shihanwan/memonto            | Memory Tool     | Graph         |
 | Memary                        | https://finetune.dev/                    | Open source        | https://github.com/kingjulio8238/Memary         | Memory Tool     | Graph         |
 | BaseAI (from Langbase) - Memory | https://langbase.com/docs/memory        | Managed, Open source | https://github.com/LangbaseInc/baseai           | Memory Tool     | Vector        |
@@ -55,11 +57,13 @@ Please open a pull request
 | Elasticsearch                 | https://www.elastic.co/elasticsearch     | Open source        | https://github.com/elastic/elasticsearch        | Storage         | Vector        |
 | Jina AI                       | https://jina.ai/                         | Open source        | https://github.com/jina-ai                      | Optimizer       | Vector        |
 | Haystack                      | https://haystack.deepset.ai/             | Open source        | https://github.com/deepset-ai                   | LLM Framework   | Vector        |
+| PraisonAI                     | https://docs.praison.ai/                 | Open source        | https://github.com/MervinPraison/PraisonAI      | LLM Framework   | Graph, Vector |
 | Rasa                          | https://rasa.com/                        | Open source        | https://github.com/RasaHQ/                      | LLM Framework   | Graph, Vector |
 | NebulaGraph                   | https://www.nebula-graph.io/             | Open source        | https://github.com/vesoft-inc/nebula            | Storage         | Graph         |
 | Vanna.AI                          | https://vanna.ai/                       | Open source        | https://github.com/vanna-ai/vanna            | Memory Tool         | Vector        |
 | Neon                          | https://neon.tech/                       | Open source        | https://github.com/neondatabase/neon            | Storage         | Vector        |
 | Alchemyst AI                  | https://getalchemystai.com/              | Closed             |                                                 | Memory Tool, Storage        | Vector, Graph |
+| MemClaw                        | https://memclaw.me                       | Open source        | https://github.com/Felo-Inc/memclaw             | Memory Tool     | Vector        |
 | WhyHowAI                      | https://www.whyhow.ai/                   | Closed             | https://github.com/whyhow-ai                    | Memory Tool     | Graph         |
 | Graphlit                      | https://graphlit.com                     | Closed             |                                                 | Memory Tool     | Graph, Vector |
 | ragie.ai                      | ragie.ai                                 | Closed             | https://github.com/ragieai                      | Memory Tool     | Vector        |
