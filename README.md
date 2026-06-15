@@ -35,6 +35,7 @@ Please open a pull request
 | MemClaw                       | https://memclaw.net/                     | Managed, Open source | https://github.com/caura-ai/caura-memclaw     | Memory Tool       | Graph, Vector |
 | Zep AI                        | https://www.getzep.com/                  | Managed, Open source | https://github.com/getzep/zep                   | Memory Tool     | Graph, Vector |
 | Mengram                       | https://mengram.io/                      | Managed, Open source | https://github.com/alibaizhanov/mengram         | Memory Tool     | Graph, Vector |
+| AccInt                        | https://accint.xyz/                      | Open glue, private core | https://github.com/maxbaluev/accreted-intelligence | Memory Tool  | Late interaction, SQLite |
 | memonto                       |                                          | Open source        | https://github.com/shihanwan/memonto            | Memory Tool     | Graph         |
 | Memary                        | https://finetune.dev/                    | Open source        | https://github.com/kingjulio8238/Memary         | Memory Tool     | Graph         |
 | BaseAI (from Langbase) - Memory | https://langbase.com/docs/memory        | Managed, Open source | https://github.com/LangbaseInc/baseai           | Memory Tool     | Vector        |
