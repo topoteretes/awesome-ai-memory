@@ -121,6 +121,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Pinecone | Managed vector database | https://pinecone.io | Closed | | Storage | Vector |
 | StarDog | Enterprise knowledge graph platform | https://www.stardog.com/ | Closed | | Storage | Graph |
 | supabase | Open-source Postgres backend (supports pgvector for embeddings) | https://supabase.com/ | Open source | https://github.com/supabase | Storage | Vector |
+| PMB (Personal Memory Brain) | Local-first persistent memory for AI coding agents over MCP; captures decisions, lessons and facts as you work and injects the relevant ones back via lifecycle hooks. Hybrid BM25 + vector + entity-graph retrieval, fully offline, no API keys. | https://oleksiijko.github.io/pmb | Open source | https://github.com/oleksiijko/pmb | Memory Tool | Vector, Graph |
 
 ## Benchmarks & evaluation
  
