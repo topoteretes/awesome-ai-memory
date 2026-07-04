@@ -50,6 +50,7 @@ Most memory systems combine a few well-established kinds of memory:
  
 - **Short-term (working) memory** — transient context held within the model's context window for a single task or conversation.
 - **Long-term memory** — information persisted externally and retrieved across sessions. It's commonly broken down into:
+- **[Context Kit](https://github.com/JDDavenport/context-kit)** — Personal Context Artifacts: static context templates for giving AI agents persistent personal context. Complements dynamic memory systems. MIT.
   - **Episodic** — specific past events and interactions ("what happened").
   - **Semantic** — facts, preferences, and entities ("what is true").
   - **Procedural** — reusable workflows and skills ("how to do something").
