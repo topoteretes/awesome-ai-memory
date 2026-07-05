@@ -151,3 +151,5 @@ If this list is useful for your work, please cite it:
   howpublished = {\url{https://github.com/topoteretes/awesome-ai-memory}}
 }
 ```
+
+- [Context Kit](https://github.com/JDDavenport/context-kit) — 4 Markdown PCA templates (wiki, mental-models, voice, protocols) for persistent AI agent context. MIT.
