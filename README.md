@@ -75,7 +75,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | txtai | All-in-one embeddings database for semantic search, LLM orchestration, and RAG | https://neuml.github.io/txtai/ | Open source | https://github.com/neuml/txtai | Memory Tool | Vector |
 | Vanna.AI | Open-source text-to-SQL framework using RAG over your database schema | https://vanna.ai/ | Open source | https://github.com/vanna-ai/vanna | Memory Tool | Vector |
 | MemClaw | Persistent, project-isolated memory for AI coding agents, with a web dashboard | https://memclaw.me | Open source | https://github.com/Felo-Inc/memclaw | Memory Tool | Vector |
-| Mimir | Local-first, encrypted persistent memory for AI agents via an MCP server (43 tools, single Rust binary, fully offline) | https://github.com/Perseus-Computing-LLC/mimir | Open source | https://github.com/Perseus-Computing-LLC/mimir | Memory Tool | Vector |
+| Perseus Vault | Local-first, encrypted persistent memory for AI agents via an MCP server (55 tools, single Rust binary, fully offline) | https://github.com/Perseus-Computing-LLC/perseus-vault | Open source | https://github.com/Perseus-Computing-LLC/perseus-vault | Memory Tool | Vector |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
