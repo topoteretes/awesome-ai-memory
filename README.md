@@ -61,6 +61,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 |------|-------------|-----|--------------|------------|----------|---------|
 | cognee | Open-source AI memory platform for agents; builds a self-hosted knowledge graph with hybrid vector + graph retrieval via an ECL pipeline | https://www.cognee.ai/ | Managed, Open source | https://github.com/topoteretes/cognee | Memory Tool | Graph, Vector |
 | mem0 (mem zero) | Self-improving memory layer for AI agents and assistants | https://mem0.ai/ | Managed, Open source | https://github.com/mem0ai/mem0 | Memory Tool | Graph, Vector |
+| context-memory | Persistent memory for Claude Code coding agents; auto-captures decisions, gotchas, and dead ends and recalls them ranked by proven usefulness (MCP server + hooks) | https://context-memory.slova.app | Managed | https://github.com/SlovaApplications/claude-plugins | Memory Tool | Vector |
 | MemClaw | Governed, shared memory for multi-agent AI fleets (pgvector + graph + keyword) | https://memclaw.net/ | Managed, Open source | https://github.com/caura-ai/caura-memclaw | Memory Tool | Graph, Vector |
 | Zep AI | Memory layer for AI agents built on a temporal knowledge graph | https://www.getzep.com/ | Managed, Open source | https://github.com/getzep/zep | Memory Tool | Graph, Vector |
 | Mengram | Memory API with semantic, episodic, and procedural memory types | https://mengram.io/ | Managed, Open source | https://github.com/alibaizhanov/mengram | Memory Tool | Graph, Vector |
