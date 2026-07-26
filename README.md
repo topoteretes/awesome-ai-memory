@@ -73,7 +73,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheus | Open-source monitoring system and time-series database | https://prometheus.io/ | Open source | https://github.com/prometheus | Memory Tool | Graph |
 | HybridAGI | Programmable neuro-symbolic agent framework with graph-based memory | https://synalinks.github.io/documentation/ | Open source | https://github.com/SynaLinks/HybridAGI | Memory Tool | Graph, Vector |
 | txtai | All-in-one embeddings database for semantic search, LLM orchestration, and RAG | https://neuml.github.io/txtai/ | Open source | https://github.com/neuml/txtai | Memory Tool | Vector |
-| engRAM | Fully offline, encrypted-at-rest vector memory for AI agents; RAM-resident hybrid vector + keyword search, exposed as an MCP server or Python/CLI library | | Open source | https://github.com/MaxFreedomPollard/engRAM | Memory Tool | Vector |
+| Compartment | Fully offline, encrypted-at-rest vector memory for AI agents; RAM-resident hybrid vector + keyword search, exposed as an MCP server or Python/CLI library | | Open source | https://github.com/MaxFreedomPollard/Compartment | Memory Tool | Vector |
 | Vanna.AI | Open-source text-to-SQL framework using RAG over your database schema | https://vanna.ai/ | Open source | https://github.com/vanna-ai/vanna | Memory Tool | Vector |
 | MemClaw | Persistent, project-isolated memory for AI coding agents, with a web dashboard | https://memclaw.me | Open source | https://github.com/Felo-Inc/memclaw | Memory Tool | Vector |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
