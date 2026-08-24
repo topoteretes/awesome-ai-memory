@@ -101,12 +101,12 @@ Each project is tagged across three dimensions:
 |--------|--------|---------|
 | **Open / Close** | Open source · Managed · Closed | Whether you can self-host, and whether a hosted offering exists |
 | **Category** | Memory Tool · LLM Framework · Optimizer · Storage | Where it sits in the stack |
-| **Storage** | Graph · Vector · Graph, Vector | How it represents and retrieves memory |
+| **Storage** | Graph · Vector · Keyword · Graph, Vector | How it represents and retrieves memory |
 
 - **Memory Tool** — purpose-built to give agents persistent, retrievable memory.
 - **LLM Framework** — general agent/app frameworks that include a memory module.
 - **Optimizer** — improves retrieval, prompts, or embeddings rather than storing memory directly.
-- **Storage** — the underlying database (vector store or graph DB) a memory layer is built on.
+- **Storage** — the underlying database or index (vector store, graph DB, or keyword index) a memory layer is built on.
 
 ## Types of AI memory
  
@@ -138,6 +138,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | HybridAGI | Programmable neuro-symbolic agent framework with graph-based memory | https://synalinks.github.io/documentation/ | Open source | https://github.com/SynaLinks/HybridAGI | Memory Tool | Graph, Vector |
 | txtai | All-in-one embeddings database for semantic search, LLM orchestration, and RAG | https://neuml.github.io/txtai/ | Open source | https://github.com/neuml/txtai | Memory Tool | Vector |
 | Vanna.AI | Open-source text-to-SQL framework using RAG over your database schema | https://vanna.ai/ | Open source | https://github.com/vanna-ai/vanna | Memory Tool | Vector |
+| Talamus | Local-first, source-grounded memory for AI agents using inspectable Markdown, SQLite/FTS5 retrieval, citations, and bitemporal history | https://ampres-ai.github.io/talamus/ | Open source | https://github.com/ampres-ai/talamus | Memory Tool | Keyword |
 | MemClaw | Persistent, project-isolated memory for AI coding agents, with a web dashboard | https://memclaw.me | Open source | https://github.com/Felo-Inc/memclaw | Memory Tool | Vector |
 | LWC | Local-first proactive memory CLI for AI coding agents; maintains a source-grounded SQLite Wiki with optional document-graph and CodeGraph projections | https://janyork.github.io/llm-wiki-cli/ | Open source | https://github.com/JanYork/llm-wiki-cli | Memory Tool | Graph |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
@@ -203,7 +204,7 @@ Memory tools often report scores on these (and on additional benchmarks such as 
 
 There might be many more companies and projects we aren't aware of. Your feedback and contributions are appreciated! ❤️
 
-To add a project, please open a pull request including its name, URL, source model (Open source / Managed / Closed), GitHub URL (if any), category, and storage model (Graph / Vector / Graph, Vector).
+To add a project, please open a pull request including its name, URL, source model (Open source / Managed / Closed), GitHub URL (if any), category, and storage model (Graph / Vector / Keyword / Graph, Vector).
 
 ## Cite this list
  
