@@ -130,6 +130,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Mengram | Memory API with semantic, episodic, and procedural memory types | https://mengram.io/ | Managed, Open source | https://github.com/alibaizhanov/mengram | Memory Tool | Graph, Vector |
 | memonto | Long-term agent memory mapped onto a user-defined ontology / knowledge graph | | Open source | https://github.com/shihanwan/memonto | Memory Tool | Graph |
 | Memary | Open-source long-term memory for autonomous agents using a knowledge graph | https://finetune.dev/ | Open source | https://github.com/kingjulio8238/Memary | Memory Tool | Graph |
+| kgai | Local-first immutable knowledge graph of engineering decisions for AI coding agents; auto-captured, recalled before edits, superseded not overwritten | https://kgai.dev | Open source | https://github.com/kgaidev/kgai | Memory Tool | Graph |
 | BaseAI (from Langbase) - Memory | Memory module of Langbase's open-source BaseAI framework for serverless AI agents | https://langbase.com/docs/memory | Managed, Open source | https://github.com/LangbaseInc/baseai | Memory Tool | Vector |
 | BondAI | Open-source AI agent framework with built-in vector memory | https://bondai.dev/docs/agent-memory/ | Open source | https://github.com/krohling/bondai | Memory Tool | Vector |
 | MemGPT (from Letta) | LLM "operating system" that manages memory beyond the context window | https://memgpt.ai/ | Managed, Open source | https://github.com/cpacker/MemGPT | Memory Tool | Graph, Vector |
