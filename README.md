@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| inspeximus | Self-correcting agent memory: a correction retires the old value by key, revert() undoes the correction on command, and every write leaves a verifiable receipt. No LLM in the loop | https://dancenitra.github.io/inspeximus/ | Open source | https://github.com/DanceNitra/inspeximus | Memory Tool | JSON file, Vector optional |
 
 ## LLM frameworks
 
