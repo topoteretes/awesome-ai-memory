@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| chamnan | Repository-local memory for coding agents; commits an architecture index, an impact map, session records, and past decisions as markdown beside the code |  | Open source | https://github.com/ArcticFox2029/chamnan | Memory Tool | Markdown |
 
 ## LLM frameworks
 
