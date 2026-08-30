@@ -81,6 +81,7 @@ Please open a pull request
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
 Have anything to add? See the [Contributing](#contributing) section.
 
+- [ViBo-memory](https://github.com/vnbochkarev-netizen/ViBo-memory) - Persistent memory for AI agents: semantic search, L1/L2/L3 encryption, 50-150x token savings on context
 ## Contents
 
 - [How to use this list](#how-to-use-this-list)
