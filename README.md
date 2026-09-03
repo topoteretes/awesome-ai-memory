@@ -65,6 +65,7 @@ Please open a pull request
 | NebulaGraph                   | https://www.nebula-graph.io/             | Open source        | https://github.com/vesoft-inc/nebula            | Storage         | Graph         |
 | Vanna.AI                          | https://vanna.ai/                       | Open source        | https://github.com/vanna-ai/vanna            | Memory Tool         | Vector        |
 | Neon                          | https://neon.tech/                       | Open source        | https://github.com/neondatabase/neon            | Storage         | Vector        |
+| OMEGA Memory                  | https://omegamax.co/                     | Open source        | https://github.com/omega-memory/omega-memory    | Memory Tool     | Vector        |
 | WhyHowAI                      | https://www.whyhow.ai/                   | Closed             | https://github.com/whyhow-ai                    | Memory Tool     | Graph         |
 | Graphlit                      | https://graphlit.com                     | Closed             |                                                 | Memory Tool     | Graph, Vector |
 | ragie.ai                      | ragie.ai                                 | Closed             | https://github.com/ragieai                      | Memory Tool     | Vector        |
