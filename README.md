@@ -140,6 +140,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Vanna.AI | Open-source text-to-SQL framework using RAG over your database schema | https://vanna.ai/ | Open source | https://github.com/vanna-ai/vanna | Memory Tool | Vector |
 | MemClaw | Persistent, project-isolated memory for AI coding agents, with a web dashboard | https://memclaw.me | Open source | https://github.com/Felo-Inc/memclaw | Memory Tool | Vector |
 | LWC | Local-first proactive memory CLI for AI coding agents; maintains a source-grounded SQLite Wiki with optional document-graph and CodeGraph projections | https://janyork.github.io/llm-wiki-cli/ | Open source | https://github.com/JanYork/llm-wiki-cli | Memory Tool | Graph |
+| Wontopos (Tablet 2) | Managed memory API with deterministic, language-agnostic retrieval (no lexical matching, no LLM in the retrieval path) | https://wontopos.com/ | Managed, Closed | https://github.com/wontopos/beam1m-tablet-2 | Memory Tool | Vector |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
