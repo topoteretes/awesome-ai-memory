@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| infiniteMem | Deterministic self-hosted episodic memory for agents; LoCoMo QA 70.49, sub-ms retrieval, 1M episodes/145M tokens design | https://github.com/marcot3ssar1/InfiniteMemOs | Closed | https://github.com/marcot3ssar1/InfiniteMemOs | Memory Tool | Vector |
 
 ## LLM frameworks
 
