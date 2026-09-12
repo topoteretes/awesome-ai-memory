@@ -25,6 +25,7 @@ Please open a pull request
 
 - **Browse examples in the [Cognee QuickStart](https://topoteretes.github.io/cognee/quickstart/)**
 - **Contact us at [info@topoteretes.com](mailto:info@topoteretes.com) or join us on [Discord](https://discord.gg/m9KxxYWH)**
+- [Ivy Tendril](https://github.com/Ivy-Interactive/Ivy-Tendril) - Open-source agentic software factory with an amazing UI that handles parallel Git worktrees for you, complete with programmatic verifications and fast review loops
 - **Follow us on [Twitter](https://twitter.com/tricalt)**
 
 
