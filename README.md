@@ -68,6 +68,7 @@ Please open a pull request
 | WhyHowAI                      | https://www.whyhow.ai/                   | Closed             | https://github.com/whyhow-ai                    | Memory Tool     | Graph         |
 | Graphlit                      | https://graphlit.com                     | Closed             |                                                 | Memory Tool     | Graph, Vector |
 | ragie.ai                      | ragie.ai                                 | Closed             | https://github.com/ragieai                      | Memory Tool     | Vector        |
+| ZeroDB (AINative Studio)      | https://ainative.studio/products/zerodb  | Managed, Open source | https://github.com/AINative-Studio/ainative-zerodb-mcp-server | Memory Tool | Graph, Vector |
 | Ontotext                      | https://www.ontotext.com/                | Closed             | https://github.com/Ontotext-AD                  | Memory Tool     | Graph         |
 | SID                           | https://www.sid.ai/                      | Closed             |                                                 | Memory Tool     | Vector        |
 | vectara                       | https://www.vectara.com/                 | Closed             |                                                 | Storage         | Vector        |
@@ -143,6 +144,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
+| ZeroDB (AINative Studio) | Persistent knowledge layer for AI agents — vector search, semantic memory, and a W3C RDF knowledge graph in one platform, with a 69+ tool MCP server | https://ainative.studio/products/zerodb | Managed, Open source | https://github.com/AINative-Studio/ainative-zerodb-mcp-server | Memory Tool | Graph, Vector |
 | Ontotext | Enterprise knowledge-graph platform (GraphDB) for RDF and semantic data | https://www.ontotext.com/ | Closed | https://github.com/Ontotext-AD | Memory Tool | Graph |
 | SID | | https://www.sid.ai/ | Closed | | Memory Tool | Vector |
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
