@@ -89,6 +89,7 @@ Have anything to add? See the [Contributing](#contributing) section.
 - [LLM frameworks](#llm-frameworks)
 - [Optimizers](#optimizers)
 - [Storage](#storage)
+- [Security](#security)
 - [Benchmarks & evaluation](#benchmarks--evaluation)
 - [Contributing](#contributing)
 - [Cite this list](#cite-this-list)
@@ -100,13 +101,14 @@ Each project is tagged across three dimensions:
 | Column | Values | Meaning |
 |--------|--------|---------|
 | **Open / Close** | Open source · Managed · Closed | Whether you can self-host, and whether a hosted offering exists |
-| **Category** | Memory Tool · LLM Framework · Optimizer · Storage | Where it sits in the stack |
+| **Category** | Memory Tool · LLM Framework · Optimizer · Storage · Security | Where it sits in the stack |
 | **Storage** | Graph · Vector · Graph, Vector | How it represents and retrieves memory |
 
 - **Memory Tool** — purpose-built to give agents persistent, retrievable memory.
 - **LLM Framework** — general agent/app frameworks that include a memory module.
 - **Optimizer** — improves retrieval, prompts, or embeddings rather than storing memory directly.
 - **Storage** — the underlying database (vector store or graph DB) a memory layer is built on.
+- **Security** — protects a memory layer against poisoning and tampering (validation on write, integrity checks on read).
 
 ## Types of AI memory
  
@@ -186,6 +188,14 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Pinecone | Managed vector database | https://pinecone.io | Closed | | Storage | Vector |
 | StarDog | Enterprise knowledge graph platform | https://www.stardog.com/ | Closed | | Storage | Graph |
 | supabase | Open-source Postgres backend (supports pgvector for embeddings) | https://supabase.com/ | Open source | https://github.com/supabase | Storage | Vector |
+
+## Security
+
+Memory that persists across sessions is also an attack surface: a poisoned write (from a tool result, a web page, or another agent) is replayed into every later prompt. Tools in this category sit on the write/read path of a memory layer to validate content before it is persisted and to verify protected records on read (OWASP Top 10 for Agentic Applications, ASI06; MITRE ATLAS AML.T0080.000).
+
+| Name | Description | URL | Open / Close | GitHub URL | Category | Storage |
+|------|-------------|-----|--------------|------------|----------|---------|
+| OWASP Agent Memory Guard | Runtime guard for AI-agent memory: write-path detectors, source-class provenance, integrity baselines, quarantine and rollback; adapters for LangChain, OpenAI Agents SDK, AutoGen, CrewAI, and mem0 | https://owasp.org/www-project-agent-memory-guard/ | Open source | https://github.com/OWASP/www-project-agent-memory-guard | Security | Any |
 
 ## Benchmarks & evaluation
  
