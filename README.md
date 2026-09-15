@@ -66,6 +66,7 @@ Please open a pull request
 | Vanna.AI                          | https://vanna.ai/                       | Open source        | https://github.com/vanna-ai/vanna            | Memory Tool         | Vector        |
 | Neon                          | https://neon.tech/                       | Open source        | https://github.com/neondatabase/neon            | Storage         | Vector        |
 | WhyHowAI                      | https://www.whyhow.ai/                   | Closed             | https://github.com/whyhow-ai                    | Memory Tool     | Graph         |
+| GoodMem | https://goodmem.ai/ | Managed, Closed | | Memory Tool | Vector |
 | Graphlit                      | https://graphlit.com                     | Closed             |                                                 | Memory Tool     | Graph, Vector |
 | ragie.ai                      | ragie.ai                                 | Closed             | https://github.com/ragieai                      | Memory Tool     | Vector        |
 | Ontotext                      | https://www.ontotext.com/                | Closed             | https://github.com/Ontotext-AD                  | Memory Tool     | Graph         |
@@ -141,6 +142,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | MemClaw | Persistent, project-isolated memory for AI coding agents, with a web dashboard | https://memclaw.me | Open source | https://github.com/Felo-Inc/memclaw | Memory Tool | Vector |
 | LWC | Local-first proactive memory CLI for AI coding agents; maintains a source-grounded SQLite Wiki with optional document-graph and CodeGraph projections | https://janyork.github.io/llm-wiki-cli/ | Open source | https://github.com/JanYork/llm-wiki-cli | Memory Tool | Graph |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
+| GoodMem | Self-hostable memory service for AI agents with server-side chunking, embeddings, semantic retrieval, and shared memory spaces | https://goodmem.ai/ | Managed, Closed | | Memory Tool | Vector |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
 | Ontotext | Enterprise knowledge-graph platform (GraphDB) for RDF and semantic data | https://www.ontotext.com/ | Closed | https://github.com/Ontotext-AD | Memory Tool | Graph |
