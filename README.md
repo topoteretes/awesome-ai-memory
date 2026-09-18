@@ -79,6 +79,7 @@ Please open a pull request
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
+| Screenpipe                    | https://screenpipe.com/                  | Source-available   | https://github.com/screenpipe/screenpipe        | Memory Tool     | SQLite        |
 Have anything to add? See the [Contributing](#contributing) section.
 
 ## Contents
@@ -148,6 +149,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| Screenpipe | Searchable local screen and audio history exposed to AI assistants through a local API and MCP server | https://screenpipe.com/ | Source-available | https://github.com/screenpipe/screenpipe | Memory Tool | SQLite |
 
 ## LLM frameworks
 
