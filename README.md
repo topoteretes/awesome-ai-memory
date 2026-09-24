@@ -38,6 +38,7 @@ Please open a pull request
 | mem0 (mem zero)               | https://mem0.ai/                         | Managed, Open source | https://github.com/mem0ai/mem0                  | Memory Tool     | Graph, Vector |
 | MemClaw                       | https://memclaw.net/                     | Managed, Open source | https://github.com/caura-ai/caura-memclaw     | Memory Tool       | Graph, Vector |
 | Zep AI                        | https://www.getzep.com/                  | Managed, Open source | https://github.com/getzep/zep                   | Memory Tool     | Graph, Vector |
+| Sentra                        | https://www.sentra.app/                  | Managed            |                                                 | Memory Tool     | Graph, Vector |
 | memonto                       |                                          | Open source        | https://github.com/shihanwan/memonto            | Memory Tool     | Graph         |
 | Memary                        | https://finetune.dev/                    | Open source        | https://github.com/kingjulio8238/Memary         | Memory Tool     | Graph         |
 | BaseAI (from Langbase) - Memory | https://langbase.com/docs/memory        | Managed, Open source | https://github.com/LangbaseInc/baseai           | Memory Tool     | Vector        |
@@ -142,6 +143,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | LWC | Local-first proactive memory CLI for AI coding agents; maintains a source-grounded SQLite Wiki with optional document-graph and CodeGraph projections | https://janyork.github.io/llm-wiki-cli/ | Open source | https://github.com/JanYork/llm-wiki-cli | Memory Tool | Graph |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
+| Sentra | Organization-wide memory for teams and AI agents: bi-temporal fact graph built from 200+ connected tools, served over REST and MCP | https://www.sentra.app/ | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
 | Ontotext | Enterprise knowledge-graph platform (GraphDB) for RDF and semantic data | https://www.ontotext.com/ | Closed | https://github.com/Ontotext-AD | Memory Tool | Graph |
 | SID | | https://www.sid.ai/ | Closed | | Memory Tool | Vector |
