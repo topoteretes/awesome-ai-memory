@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| deja-vu | Local memory over the session files coding agents already write to disk (Claude Code, Codex, Cursor and 31 others), including history from before install; BM25 keyword retrieval, no LLM and no embeddings | https://vshulcz.github.io/deja-vu/ | Open source | https://github.com/vshulcz/deja-vu | Memory Tool | Keyword (BM25) |
 
 ## LLM frameworks
 
