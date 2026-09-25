@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| Tempreon | Person-owned, portable AI memory served over MCP — knowledge, preferences, and decisions captured in one assistant available across Claude, ChatGPT, Cursor, and any MCP client | https://tempreon.com | Managed | https://github.com/Tempreon/tempreon-mcp | Memory Tool | Vector |
 
 ## LLM frameworks
 
