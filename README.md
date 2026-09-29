@@ -127,6 +127,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | mem0 (mem zero) | Self-improving memory layer for AI agents and assistants | https://mem0.ai/ | Managed, Open source | https://github.com/mem0ai/mem0 | Memory Tool | Graph, Vector |
 | MemClaw | Governed, shared memory for multi-agent AI fleets (pgvector + graph + keyword) | https://memclaw.net/ | Managed, Open source | https://github.com/caura-ai/caura-memclaw | Memory Tool | Graph, Vector |
 | Zep AI | Memory layer for AI agents built on a temporal knowledge graph | https://www.getzep.com/ | Managed, Open source | https://github.com/getzep/zep | Memory Tool | Graph, Vector |
+| Haki | Self-hosted memory layer for AI agents: bitemporal fact ledger with supersession (never silently overwritten), conflict detection, and a full context trace | https://gethaki.space/ | Managed, Open source | https://github.com/GetHaki/Haki | Memory Tool | Vector |
 | Mengram | Memory API with semantic, episodic, and procedural memory types | https://mengram.io/ | Managed, Open source | https://github.com/alibaizhanov/mengram | Memory Tool | Graph, Vector |
 | memonto | Long-term agent memory mapped onto a user-defined ontology / knowledge graph | | Open source | https://github.com/shihanwan/memonto | Memory Tool | Graph |
 | Memary | Open-source long-term memory for autonomous agents using a knowledge graph | https://finetune.dev/ | Open source | https://github.com/kingjulio8238/Memary | Memory Tool | Graph |
