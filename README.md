@@ -78,6 +78,7 @@ Please open a pull request
 | AllegroGraph                  | https://allegrograph.com/                | Closed             |                                                 | Memory Tool     | Graph         |
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
+| Magnemo                       | https://magnemo.ai                       | Open source (Apache-2.0) | https://github.com/Magnemo-AI/magnemo         | Memory Tool     | Files (markdown) |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
 Have anything to add? See the [Contributing](#contributing) section.
 
