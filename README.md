@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| Mnemosyne | Zero-dependency local memory for agents: a four-layer store kept as plain Markdown, ranked by compound-cue cognitive formulas instead of embeddings | https://github.com/ElonAug7/Mnemosyne-agentmemory-engine-openclaw-hermes | Open source | https://github.com/ElonAug7/Mnemosyne-agentmemory-engine-openclaw-hermes | Memory Tool | Markdown |
 
 ## LLM frameworks
 
