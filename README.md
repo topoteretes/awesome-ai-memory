@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| Big Agentic Brain | Self-hosted shared memory for an organization's AI agents: memories ranked by agents' feedback, private reminders and agent-to-agent messages; MCP server (10 tools), plain HTTP API and web UI, no LLM keys | https://github.com/enhesa/big-agentic-brain | Open source | https://github.com/enhesa/big-agentic-brain | Memory Tool | SQLite |
 
 ## LLM frameworks
 
