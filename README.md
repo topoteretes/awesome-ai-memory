@@ -79,6 +79,7 @@ Please open a pull request
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
+| MemorySync                    | https://memorysync.io                    | Closed             | https://github.com/memorysyncio                 | Memory Tool     | Vector        |
 Have anything to add? See the [Contributing](#contributing) section.
 
 ## Contents
@@ -148,6 +149,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| MemorySync | API and SDK infrastructure for storing, retrieving, updating, deleting, governing, and inspecting memory used by AI applications | https://memorysync.io | Closed | https://github.com/memorysyncio | Memory Tool | Vector |
 
 ## LLM frameworks
 
