@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| trip2g | Self-hosted MCP memory over an Obsidian vault: agents search and read plain Markdown notes that are also published as a website; hubs federate search with peers | https://trip2g.com/ | Open source | https://github.com/trip2g/trip2g | Memory Tool | Vector |
 
 ## LLM frameworks
 
