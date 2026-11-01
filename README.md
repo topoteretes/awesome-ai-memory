@@ -149,7 +149,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
-| vidbyte-memory | Correction-driven memory for coding agents: each correction becomes a Markdown fact, a pytest test or verifier, and a git commit in the user's repo | https://github.com/cerredz/vidbyte-memory | Open source | https://github.com/cerredz/vidbyte-memory | Memory Tool | Files (Markdown, git) |
+| vidbyte-memory | Correction-driven memory for coding agents: corrections become Markdown facts, pytest tests or verifiers where a check can be written, and git commits in the user's repo | https://github.com/cerredz/vidbyte-memory | Open source | https://github.com/cerredz/vidbyte-memory | Memory Tool | Files (Markdown, git) |
 
 ## LLM frameworks
 
