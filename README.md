@@ -79,6 +79,7 @@ Please open a pull request
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
+| Renor                         | https://renor.cloud/?utm_source=awesome-ai-memory&utm_medium=listing&utm_campaign=directories | Managed, Open source | https://github.com/renorai/renor-engine | Memory Tool     | Vector        |
 Have anything to add? See the [Contributing](#contributing) section.
 
 ## Contents
