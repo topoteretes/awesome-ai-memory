@@ -172,6 +172,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 |------|-------------|-----|--------------|------------|----------|---------|
 | Neo4j | Graph database | https://neo4j.com/ | Managed, Open source | https://github.com/neo4j | Storage | Graph |
 | FalkorDB | Low-latency graph database for GraphRAG and AI workloads | https://www.falkordb.com/ | Open source | https://github.com/FalkorDB/falkordb | Storage | Graph |
+| HydraDB | Graph infrastructure for persistent, time-aware, and relationship-driven agent memory. | https://hydradb.com/ | Managed, Open source | https://github.com/hydra-db/hydradb | Storage | Graph |
 | chroma | Open-source embedding (vector) database | https://www.trychroma.com/ | Open source | https://github.com/chroma-core/chroma | Storage | Vector |
 | Weaviate | Open-source vector database | https://weaviate.io | Open source | https://github.com/weaviate/weaviate | Storage | Vector |
 | Milvus | Open-source vector database | https://milvus.io | Open source | https://github.com/milvus-io/milvus | Storage | Vector |
