@@ -186,6 +186,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Pinecone | Managed vector database | https://pinecone.io | Closed | | Storage | Vector |
 | StarDog | Enterprise knowledge graph platform | https://www.stardog.com/ | Closed | | Storage | Graph |
 | supabase | Open-source Postgres backend (supports pgvector for embeddings) | https://supabase.com/ | Open source | https://github.com/supabase | Storage | Vector |
+| HelixDB | Open-source graph-vector database in Rust (Apache-2.0) with graph traversal, vector search and BM25 full-text search in one engine, for agent memory and GraphRAG | https://www.helix-db.com | Open source, Managed | https://github.com/HelixDB/helix-db | Storage | Graph, Vector |
 
 ## Benchmarks & evaluation
  
