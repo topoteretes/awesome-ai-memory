@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| Helix Foundry | Apache-2.0 tool that connects databases, apps and documents, has an agent draft an ontology over them, and loads it into HelixDB as one graph you can explore and ask questions of, with every value traced to its source | https://foundry.helix-db.com | Open source, Managed | https://github.com/HelixDB/helix-foundry | Memory Tool | Graph, Vector |
 
 ## LLM frameworks
 
