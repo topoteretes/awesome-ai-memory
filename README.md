@@ -148,6 +148,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Prometheux | Explainable reasoning / ontology engine over large knowledge graphs (Vadalog) | https://www.prometheux.co.uk/ | Closed | | Memory Tool, Storage | Vector |
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
+| MemoryBrain | Personal memory for ChatGPT and Claude over MCP; every note keeps its source (read, said or chat), with typed links between notes | https://memorybrain.ai/?ref=awesome-ai-memory | Managed, Open source | https://github.com/Memory-brain/open-brain | Memory Tool | Graph |
 
 ## LLM frameworks
 
