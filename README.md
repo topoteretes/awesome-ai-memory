@@ -193,6 +193,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | GoodMem | Self-hostable memory service for AI agents with server-side chunking, embeddings, semantic retrieval, and shared memory spaces | https://goodmem.ai/ | Managed, Closed | | Memory Tool | Vector |
 | Sentra | Organization-wide memory for teams and AI agents: bi-temporal fact graph built from 200+ connected tools, served over REST and MCP | https://www.sentra.app/ | Closed | | Memory Tool | Graph, Vector |
 | MemoryRouter | Hosted persistent memory shared across Claude, ChatGPT, coding agents, and any MCP client through a remote MCP server | https://memoryrouter.ai/ | Closed | https://github.com/John-Rood/memoryrouter-sdk | Memory Tool | Vector |
+| Famfol | Shared on-device memory for AI apps on Mac (Claude Code, Codex, Cursor) over MCP, with provenance and a review queue | https://famfol.com/ | Closed | | Memory Tool | Vector |
 
 ## LLM frameworks
 
