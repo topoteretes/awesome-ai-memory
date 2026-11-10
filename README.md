@@ -162,6 +162,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Haystack | Open-source framework (deepset) for RAG and search pipelines | https://haystack.deepset.ai/ | Open source | https://github.com/deepset-ai | LLM Framework | Vector |
 | PraisonAI | Multi-agent framework for building and orchestrating AI agents | https://docs.praison.ai/ | Open source | https://github.com/MervinPraison/PraisonAI | LLM Framework | Graph, Vector |
 | Rasa | Open-source framework for conversational assistants | https://rasa.com/ | Open source | https://github.com/RasaHQ/ | LLM Framework | Graph, Vector |
+| Autohand Code CLI | Open-source terminal coding agent with built-in persistent memory; 15+ model providers and local models | https://www.autohand.ai/code/ | Open source | https://github.com/autohandai/code-cli | LLM Framework | Vector |
 
 ## Optimizers
 
