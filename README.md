@@ -147,6 +147,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | OMEGA Memory | Persistent memory for AI coding agents | https://omegamax.co/ | Open source | https://github.com/omega-memory/omega-memory | Memory Tool | Vector |
 | Hindsight (by Vectorize) | Open-source agent memory that learns from interactions; graph + vector retrieval | https://hindsight.vectorize.io | Open source | https://github.com/vectorize-io/hindsight | Memory Tool | Graph, Vector |
 | Mnemory | Self-hosted, secure memory system for AI agents and assistants | | Open source | https://github.com/fpytloun/mnemory | Memory Tool | Vector |
+| Screenpipe | Searchable local screen and audio history exposed to AI assistants through a local API and MCP server | https://screenpipe.com/ | Source-available | https://github.com/screenpipe/screenpipe | Memory Tool | Keyword, Vector |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
