@@ -146,6 +146,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Remembra | Cross-agent session handoffs for coding agents (facts from git, a short brief for the next agent, a trail of every session) on a memory layer with entity extraction and hybrid recall | https://remembra.dev/ | Managed, Open source | https://github.com/remembra-ai/remembra | Memory Tool | Graph, Vector |
 | OMEGA Memory | Persistent memory for AI coding agents | https://omegamax.co/ | Open source | https://github.com/omega-memory/omega-memory | Memory Tool | Vector |
 | Hindsight (by Vectorize) | Open-source agent memory that learns from interactions; graph + vector retrieval | https://hindsight.vectorize.io | Open source | https://github.com/vectorize-io/hindsight | Memory Tool | Graph, Vector |
+| Mnemory | Self-hosted, secure memory system for AI agents and assistants | | Open source | https://github.com/fpytloun/mnemory | Memory Tool | Vector |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
