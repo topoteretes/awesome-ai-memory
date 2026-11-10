@@ -242,6 +242,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | StarDog | Enterprise knowledge graph platform | https://www.stardog.com/ | Closed | | Storage | Graph |
 | supabase | Open-source Postgres backend (supports pgvector for embeddings) | https://supabase.com/ | Open source | https://github.com/supabase | Storage | Vector |
 | HydraDB | Fast graph database on object storage for persistent, time-aware, relationship-driven agent memory | https://hydradb.com/ | Managed, Open source | https://github.com/hydra-db/hydradb | Storage | Graph |
+| HelixDB | Open-source graph-vector database in Rust (Apache-2.0) with graph traversal, vector search and BM25 full-text search in one engine, for agent memory and GraphRAG | https://www.helix-db.com | Managed, Open source | https://github.com/HelixDB/helix-db | Storage | Graph, Vector |
 
 ## Security
 
