@@ -210,6 +210,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 |------|-------------|-----|--------------|------------|----------|---------|
 | DSPy | Framework for programming and optimizing LLM prompts and pipelines (Stanford NLP) | https://dspy.ai/ | Open source | https://github.com/stanfordnlp/dspy | Optimizer | Vector |
 | Jina AI | Multimodal AI framework for neural search and embeddings | https://jina.ai/ | Open source | https://github.com/jina-ai | Optimizer | Vector |
+| Galahad (from Corbenic) | Saves the KV-cache state of ~16K-token blocks to encrypted local NVMe and reloads it byte-exact instead of recomputing; plugs into vLLM, SGLang and llama.cpp. Proprietary: free on one GPU for non-commercial use | https://huggingface.co/papers/2610.10845 | Closed | https://github.com/corbenicai/galahad | Optimizer | KV cache |
 
 ## Storage
 
