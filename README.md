@@ -239,6 +239,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Pinecone | Managed vector database | https://pinecone.io | Closed | | Storage | Vector |
 | StarDog | Enterprise knowledge graph platform | https://www.stardog.com/ | Closed | | Storage | Graph |
 | supabase | Open-source Postgres backend (supports pgvector for embeddings) | https://supabase.com/ | Open source | https://github.com/supabase | Storage | Vector |
+| HydraDB | Fast graph database on object storage for persistent, time-aware, relationship-driven agent memory | https://hydradb.com/ | Managed, Open source | https://github.com/hydra-db/hydradb | Storage | Graph |
 
 ## Security
 
