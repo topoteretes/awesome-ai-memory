@@ -156,6 +156,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | AllegroGraph | Graph database supporting RDF, knowledge graphs, and vectors | https://allegrograph.com/ | Closed | | Memory Tool | Graph |
 | llongterm | | https://www.llongterm.com/ | Closed | | Memory Tool | Graph |
 | Alchemyst AI | Shared, traceable context and persistent memory layer for AI agents over company knowledge | https://getalchemystai.com/ | Closed | | Memory Tool, Storage | Graph, Vector |
+| Remio | Personal AI assistant that captures web pages, meetings, emails and files into searchable knowledge and context-aware answers | https://remio.ai/ | Closed | | Memory Tool | Vector |
 
 ## LLM frameworks
 
