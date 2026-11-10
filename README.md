@@ -186,6 +186,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | MemoryPlugin | Long-term memory shared across 21+ AI chat tools and MCP clients via browser extension, MCP server, and API; imports ChatGPT, Claude, and Gemini chat history | https://www.memoryplugin.com/ | Closed | https://github.com/memoryplugin/mcp-server | Memory Tool | Vector |
 | GoodMem | Self-hostable memory service for AI agents with server-side chunking, embeddings, semantic retrieval, and shared memory spaces | https://goodmem.ai/ | Managed, Closed | | Memory Tool | Vector |
 | Sentra | Organization-wide memory for teams and AI agents: bi-temporal fact graph built from 200+ connected tools, served over REST and MCP | https://www.sentra.app/ | Closed | | Memory Tool | Graph, Vector |
+| MemoryRouter | Hosted persistent memory shared across Claude, ChatGPT, coding agents, and any MCP client through a remote MCP server | https://memoryrouter.ai/ | Closed | https://github.com/John-Rood/memoryrouter-sdk | Memory Tool | Vector |
 
 ## LLM frameworks
 
