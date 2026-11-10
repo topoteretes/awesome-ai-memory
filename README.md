@@ -101,12 +101,12 @@ Each project is tagged across three dimensions:
 |--------|--------|---------|
 | **Open / Close** | Open source · Managed · Closed | Whether you can self-host, and whether a hosted offering exists |
 | **Category** | Memory Tool · LLM Framework · Optimizer · Storage | Where it sits in the stack |
-| **Storage** | Graph · Vector · Graph, Vector | How it represents and retrieves memory |
+| **Storage** | Graph · Vector · Keyword · Graph, Vector | How it represents and retrieves memory |
 
 - **Memory Tool** — purpose-built to give agents persistent, retrievable memory.
 - **LLM Framework** — general agent/app frameworks that include a memory module.
 - **Optimizer** — improves retrieval, prompts, or embeddings rather than storing memory directly.
-- **Storage** — the underlying database (vector store or graph DB) a memory layer is built on.
+- **Storage** — the underlying database or index (vector store, graph DB, or keyword index) a memory layer is built on.
 
 ## Types of AI memory
  
@@ -156,6 +156,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Engrava | Embedded memory database for AI agents: typed knowledge graph, hybrid search (vector + full-text + recency + priority + graph), and a tamper-evident SHA-256 journal of every write, in SQLite; no server, no LLM in the memory layer | https://engrava.ai | Open source | https://github.com/sovantica/engrava | Memory Tool | Graph, Vector, Keyword |
 | GoodMemory | Local-first, auditable memory for AI agents and coding hosts, with SQLite persistence, embedding-free recall by default, optional vectors, and governed writeback | https://www.npmjs.com/package/goodmemory | Open source | https://github.com/hjqcan/GoodMemory | Memory Tool | Keyword, Vector |
 | Lians | Open-source bitemporal memory for agents with deterministic supersession, point-in-time recall, and tamper-evident audit history | https://www.lians.ai/ | Open source | https://github.com/Lians-ai/Lians | Memory Tool | Vector |
+| Talamus | Local-first, source-grounded memory for AI agents using inspectable Markdown, SQLite/FTS5 retrieval, citations, and bitemporal history | https://ampres-ai.github.io/talamus/ | Open source | https://github.com/ampres-ai/talamus | Memory Tool | Keyword |
 | WhyHowAI | Knowledge-graph tooling for structuring RAG and agent memory | https://www.whyhow.ai/ | Closed | https://github.com/whyhow-ai | Memory Tool | Graph |
 | Graphlit | Managed knowledge API for content ingestion, RAG, and agents | https://graphlit.com | Closed | | Memory Tool | Graph, Vector |
 | ragie.ai | Managed RAG-as-a-service for ingesting and retrieving documents | https://ragie.ai | Closed | https://github.com/ragieai | Memory Tool | Vector |
@@ -222,7 +223,7 @@ Memory tools often report scores on these (and on additional benchmarks such as 
 
 There might be many more companies and projects we aren't aware of. Your feedback and contributions are appreciated! ❤️
 
-To add a project, please open a pull request including its name, URL, source model (Open source / Managed / Closed), GitHub URL (if any), category, and storage model (Graph / Vector / Graph, Vector).
+To add a project, please open a pull request including its name, URL, source model (Open source / Managed / Closed), GitHub URL (if any), category, and storage model (Graph / Vector / Keyword / Graph, Vector).
 
 ## Cite this list
  
