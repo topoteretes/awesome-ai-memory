@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI memory landscape</title>
+<!--
+  The AI memory landscape for github.com/topoteretes/awesome-ai-memory (CLO-1604), in the design system's look:
+  the dark page and its 16px grid, TWK Lausanne, square black panels with hairline frames (Panel), the type scale
+  (display title, section header, 11px label), lavender and green. Every mark in one colour (--mark), without its
+  tile or name; the names stay as each mark's label and title. Columns: graph (lavender), both (lavender to
+  green, the old chart's gradient in the new colours), vector (green).
+  Sized as the old infographic_v7.png: 1100 × 1084.3 here, exported at 2317 / 1100 = 2317 × 2284.
+  Companies are DATA below; marks are cut from infographic_v7.png (marks/). TWK Lausanne is licensed, so it is not in
+  this repo: put TWKLausanne-300/700.woff2 in fonts/ (ignored by git) to preview and export. Export: open this page,
+  screenshot #chart at 2317 / 1100 device pixels per CSS pixel, and keep 2317 × 2284.
+-->
+<style>
+@font-face { font-family: TWKLausanne; font-weight: 300; src: local("TWK Lausanne Light"), url(fonts/TWKLausanne-300.woff2) format("woff2"); }
+@font-face { font-family: TWKLausanne; font-weight: 700; src: local("TWK Lausanne Bold"), url(fonts/TWKLausanne-700.woff2) format("woff2"); }
+:root {
+  /* the design system's tokens (cognee-*) */
+  --page: #111111; --panel: #000000; --fg: #edecea; --subtle: rgba(237, 236, 234, .58); --faint: rgba(237, 236, 234, .36);
+  --frame: rgba(237, 236, 234, .10); --frame-strong: rgba(237, 236, 234, .38);
+  --lavender: #bc9bff; --green: #8cff86; --blend: linear-gradient(90deg, var(--lavender), var(--green));
+  --mark: var(--fg);
+  --grid: linear-gradient(rgba(237, 236, 234, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(237, 236, 234, .05) 1px, transparent 1px);
+  --font: TWKLausanne, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; }
+body { background: #000; font-family: var(--font); color: var(--fg); -webkit-font-smoothing: antialiased; }
+#chart { width: 1100px; height: 1084.3px; padding: 44px 48px 36px; display: flex; flex-direction: column; background: var(--page) var(--grid); background-size: 16px 16px; }
+/* the label: 11/16, bold, uppercase, spaced (SectionLabel) */
+.label { font: 700 11px/16px var(--font); letter-spacing: .05em; text-transform: uppercase; }
+header { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+header .label { color: var(--lavender); }
+header h1 { margin-top: 8px; font: 300 38px/46px var(--font); }                 /* text-display */
+header p { margin-top: 8px; font: 300 14px/20px var(--font); color: var(--subtle); max-width: 620px; }   /* text-sm */
+.legend { display: flex; gap: 20px; margin-top: 14px; }
+.legend span { display: flex; align-items: center; gap: 8px; font: 300 14px/20px var(--font); color: var(--subtle); }
+.legend i { width: 10px; height: 10px; }
+.brand { margin-top: 6px; color: var(--fg); }
+.brand svg { display: block; height: 22px; width: auto; }
+section { flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; margin-top: 28px; }
+.sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.sec-head h2 { font: 300 20px/28px var(--font); }                              /* SectionHeader, text-xl */
+.sec-head span { font: 300 14px/20px var(--font); color: var(--subtle); }
+.grid { flex: 1 1 auto; display: grid; grid-template-columns: 112px repeat(3, 1fr); grid-template-rows: auto repeat(4, minmax(min-content, 1fr)); column-gap: 12px; }
+.panel { grid-row: 1 / -1; background: var(--panel); border: 1px solid var(--frame); position: relative; }
+.panel::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 2px; }
+.k-graph.panel::before { background: var(--lavender); } .k-vector.panel::before { background: var(--green); } .k-both.panel::before { background: var(--blend); }
+.col-head { grid-row: 1; padding: 12px 14px 10px; z-index: 1; }
+.col-head.k-graph { color: var(--lavender); } .col-head.k-vector { color: var(--green); }
+.col-head.k-both span { background: var(--blend); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.row-name { padding: 13px 0 0; color: var(--subtle); border-top: 1px solid var(--frame); z-index: 1; }
+.cell { padding: 12px 14px; border-top: 1px solid var(--frame); display: flex; flex-wrap: wrap; align-items: center; align-content: center; gap: 12px 20px; z-index: 1; min-height: 46px; }
+.mark { display: block; background: var(--mark); -webkit-mask: var(--src) center / contain no-repeat; mask: var(--src) center / contain no-repeat; }
+.mark.cognee { background: none; color: var(--mark); }
+.mark.cognee svg { display: block; width: 100%; height: 100%; }
+footer { display: flex; justify-content: space-between; margin-top: 18px; font: 300 12px/20px var(--font); color: var(--faint); }   /* text-xs */
+</style>
+</head>
+<body>
+<div id="chart">
+  <header>
+    <div>
+      <div class="label">Awesome AI memory</div>
+      <h1>The AI memory landscape</h1>
+      <p>Tools, frameworks, optimizers and storage layers that give AI apps and agents memory, by how they keep it: as a graph, as vectors, or both.</p>
+      <div class="legend">
+        <span><i style="background: var(--lavender)"></i>Graph</span>
+        <span><i style="background: var(--blend)"></i>Both</span>
+        <span><i style="background: var(--green)"></i>Vector</span>
+      </div>
+    </div>
+    <div class="brand" aria-label="cognee"><svg viewBox="354 377 2508 692" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M540.762 453.848C478.573 453.848 431.728 500.841 431.728 554.688V610.574C431.728 664.42 478.655 711.413 540.762 711.413C571.285 711.413 592.585 702.439 623.516 680.084C640.655 667.683 664.73 671.436 677.217 688.488C689.704 705.539 685.868 729.443 668.729 741.844C630.127 769.746 593.238 787.777 540.762 787.777C439.971 787.858 354.849 710.434 354.849 610.655V554.769C354.849 454.99 439.971 377.484 540.762 377.484C593.238 377.484 630.127 395.596 668.729 423.417C685.868 435.818 689.704 459.722 677.217 476.774C664.73 493.825 640.655 497.578 623.516 485.177C592.585 462.823 571.285 453.848 540.762 453.848ZM918.299 453.848C857.825 453.848 808.857 502.555 808.857 562.683V603.557C808.857 663.686 857.906 712.392 918.299 712.392C978.692 712.392 1026.93 663.93 1026.93 603.557V562.683C1026.93 502.228 978.447 453.848 918.299 453.848ZM731.979 562.683C731.979 460.375 815.386 377.484 918.299 377.484C1021.21 377.484 1103.8 460.701 1103.8 562.765V603.639C1103.8 705.62 1021.54 788.919 918.299 788.919C815.06 788.919 731.979 705.947 731.979 603.639V562.765V562.683ZM1358.6 455.888C1298.04 455.888 1249.15 504.513 1249.15 564.233C1249.15 623.954 1298.04 672.578 1358.6 672.578C1419.15 672.578 1467.22 624.28 1467.22 564.233C1467.22 504.186 1418.91 455.888 1358.6 455.888ZM1172.28 564.233C1172.28 462.088 1255.85 379.524 1358.6 379.524C1402.34 379.524 1442.33 394.454 1473.91 419.419L1502.72 390.783C1517.74 375.853 1542.06 375.853 1557.08 390.783C1572.09 405.713 1572.09 429.862 1557.08 444.792L1523.05 478.569C1536.51 504.186 1544.1 533.394 1544.1 564.233C1544.1 666.052 1461.75 748.942 1358.6 748.942C1357.54 748.942 1356.56 748.942 1355.5 748.942H1273.88C1260.17 748.942 1249.15 759.956 1249.15 773.581C1249.15 787.206 1260.25 798.22 1273.88 798.22H1379.24H1412.95C1440.7 798.22 1469.34 805.889 1492.44 824.001C1516.27 842.765 1531.37 870.504 1534.06 904.607C1538.8 964.98 1496.19 1006.18 1461.59 1019.48L1365.29 1061.74C1345.87 1070.31 1323.18 1061.58 1314.61 1042.24C1306.04 1022.99 1314.85 1000.39 1334.19 991.903L1431.48 949.234C1432.21 948.908 1432.95 948.581 1433.68 948.337C1437.76 946.868 1444.7 942.381 1450.17 935.12C1455.14 928.348 1458.16 920.271 1457.35 910.644C1456.29 896.693 1450.82 888.861 1444.7 884.047C1437.84 878.663 1426.99 874.747 1412.87 874.747H1275.52C1275.11 874.747 1274.7 874.747 1274.29 874.747H1273.8C1217.65 874.747 1172.19 829.548 1172.19 773.744C1172.19 737.602 1191.29 705.865 1220.02 687.998C1190.31 655.282 1172.19 611.961 1172.19 564.396L1172.28 564.233ZM1796.36 455.888C1736.13 455.888 1687.33 504.431 1687.33 564.233V750.574C1687.33 771.705 1670.11 788.756 1648.89 788.756C1627.67 788.756 1610.45 771.623 1610.45 750.574V564.233C1610.45 462.17 1693.7 379.524 1796.36 379.524C1899.03 379.524 1982.28 462.251 1982.28 564.233V750.574C1982.28 771.705 1965.06 788.756 1943.84 788.756C1922.62 788.756 1905.4 771.623 1905.4 750.574V564.233C1905.4 504.349 1856.59 455.888 1796.36 455.888ZM2249.72 455.969C2187.86 455.969 2138.16 505.329 2138.16 565.62V604.944C2138.16 665.154 2187.78 714.595 2249.72 714.595C2271.18 714.595 2291.1 708.639 2307.83 698.441C2325.95 687.427 2349.61 693.056 2360.71 711.005C2371.81 728.954 2366.1 752.532 2348.06 763.546C2319.5 781.005 2285.79 790.959 2249.8 790.959C2146.07 790.959 2061.36 707.986 2061.36 604.944V565.62C2061.36 462.578 2145.99 379.606 2249.8 379.606C2338.6 379.606 2412.37 440.223 2432.12 521.809L2439.88 553.709L2276.08 619.956C2256.41 627.87 2233.97 618.487 2225.97 598.988C2217.97 579.408 2227.44 557.135 2247.11 549.221L2345.12 509.571C2325.95 477.508 2290.61 455.969 2249.8 455.969H2249.72ZM2671.08 455.969C2609.14 455.969 2559.52 505.329 2559.52 565.62V604.944C2559.52 665.154 2609.14 714.595 2671.08 714.595C2692.55 714.595 2712.46 708.639 2729.19 698.441C2737.6 693.301 2745.27 687.101 2752.04 679.921C2766.57 664.501 2790.89 663.767 2806.4 678.208C2821.9 692.648 2822.64 716.798 2808.19 732.217C2796.77 744.292 2783.79 754.816 2769.51 763.546C2740.86 781.005 2707.24 790.959 2671.16 790.959C2567.44 790.959 2482.72 707.986 2482.72 604.944V565.62C2482.72 462.578 2567.35 379.606 2671.16 379.606C2759.88 379.606 2833.74 440.223 2853.49 521.809L2861.24 553.709L2697.44 619.956C2677.78 627.87 2655.33 618.487 2647.33 598.988C2639.34 579.408 2648.8 557.135 2668.47 549.221L2766.49 509.571C2747.31 477.508 2711.97 455.969 2671.16 455.969H2671.08Z"/></svg></div>
+  </header>
+  <section id="open"><div class="sec-head"><h2>Open source</h2><span></span></div><div class="grid"></div></section>
+  <section id="closed"><div class="sec-head"><h2>Closed source</h2><span></span></div><div class="grid"></div></section>
+  <footer><span>github.com/topoteretes/awesome-ai-memory</span><span>Logos are their owners’ marks</span></footer>
+</div>
+<script>
+const DATA = [
+  {
+    "name": "Memary",
+    "source": "open",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/memary.png",
+    "w": 73,
+    "h": 74
+  },
+  {
+    "name": "llongterm",
+    "source": "open",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/llongterm.png",
+    "w": 98,
+    "h": 25
+  },
+  {
+    "name": "Memonto",
+    "source": "open",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/memonto.png",
+    "w": 218,
+    "h": 42
+  },
+  {
+    "name": "Neo4j",
+    "source": "open",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/neo4j.png",
+    "w": 70,
+    "h": 62
+  },
+  {
+    "name": "NebulaGraph",
+    "source": "open",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/nebulagraph.png",
+    "w": 127,
+    "h": 28
+  },
+  {
+    "name": "FalkorDB",
+    "source": "open",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/falkordb.png",
+    "w": 126,
+    "h": 35
+  },
+  {
+    "name": "Cognee",
+    "source": "open",
+    "kind": "both",
+    "role": "memory"
+  },
+  {
+    "name": "HybridAGI",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/hybridagi.png",
+    "w": 103,
+    "h": 34
+  },
+  {
+    "name": "Zep AI",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/zep-ai.png",
+    "w": 39,
+    "h": 33
+  },
+  {
+    "name": "GraphRAG",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/graphrag.png",
+    "w": 57,
+    "h": 54
+  },
+  {
+    "name": "mem0",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/mem0.png",
+    "w": 96,
+    "h": 23
+  },
+  {
+    "name": "MemGPT",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/memgpt.png",
+    "w": 59,
+    "h": 50
+  },
+  {
+    "name": "LlamaIndex",
+    "source": "open",
+    "kind": "both",
+    "role": "framework",
+    "mark": "marks/llamaindex.png",
+    "w": 57,
+    "h": 47
+  },
+  {
+    "name": "Rasa",
+    "source": "open",
+    "kind": "both",
+    "role": "framework",
+    "mark": "marks/rasa.png",
+    "w": 95,
+    "h": 37
+  },
+  {
+    "name": "LangChain",
+    "source": "open",
+    "kind": "both",
+    "role": "framework",
+    "mark": "marks/langchain.png",
+    "w": 51,
+    "h": 26
+  },
+  {
+    "name": "Vanna.AI",
+    "source": "open",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/vanna-ai.png",
+    "w": 59,
+    "h": 57
+  },
+  {
+    "name": "txtai",
+    "source": "open",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/txtai.png",
+    "w": 76,
+    "h": 42
+  },
+  {
+    "name": "BondAI",
+    "source": "open",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/bondai.png",
+    "w": 77,
+    "h": 58
+  },
+  {
+    "name": "BaseAI",
+    "source": "open",
+    "kind": "vector",
+    "role": "framework",
+    "mark": "marks/baseai.png",
+    "w": 119,
+    "h": 30
+  },
+  {
+    "name": "Haystack",
+    "source": "open",
+    "kind": "vector",
+    "role": "framework",
+    "mark": "marks/haystack.png",
+    "w": 118,
+    "h": 31
+  },
+  {
+    "name": "Botpress",
+    "source": "open",
+    "kind": "vector",
+    "role": "framework",
+    "mark": "marks/botpress.png",
+    "w": 126,
+    "h": 28
+  },
+  {
+    "name": "DSPy",
+    "source": "open",
+    "kind": "vector",
+    "role": "optimizer",
+    "mark": "marks/dspy.png",
+    "w": 164,
+    "h": 47
+  },
+  {
+    "name": "Jina AI",
+    "source": "open",
+    "kind": "vector",
+    "role": "optimizer",
+    "mark": "marks/jina-ai.png",
+    "w": 78,
+    "h": 34
+  },
+  {
+    "name": "Qdrant",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/qdrant.png",
+    "w": 133,
+    "h": 43
+  },
+  {
+    "name": "Weaviate",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/weaviate.png",
+    "w": 77,
+    "h": 59
+  },
+  {
+    "name": "Chroma",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/chroma.png",
+    "w": 72,
+    "h": 66
+  },
+  {
+    "name": "Neon",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/neon.png",
+    "w": 77,
+    "h": 33
+  },
+  {
+    "name": "Milvus",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/milvus.png",
+    "w": 100,
+    "h": 24
+  },
+  {
+    "name": "Oxford Semantic Technologies",
+    "source": "closed",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/oxford-semantic-technologies.png",
+    "w": 216,
+    "h": 55
+  },
+  {
+    "name": "Stardog",
+    "source": "closed",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/stardog.png",
+    "w": 109,
+    "h": 55
+  },
+  {
+    "name": "AllegroGraph",
+    "source": "closed",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/allegrograph.png",
+    "w": 69,
+    "h": 68
+  },
+  {
+    "name": "Ontotext",
+    "source": "closed",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/ontotext.png",
+    "w": 94,
+    "h": 18
+  },
+  {
+    "name": "WhyHow.AI",
+    "source": "closed",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/whyhow-ai.png",
+    "w": 122,
+    "h": 34
+  },
+  {
+    "name": "Graphlit",
+    "source": "closed",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/graphlit.png",
+    "w": 44,
+    "h": 71
+  },
+  {
+    "name": "Vectara",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/vectara.png",
+    "w": 77,
+    "h": 73
+  },
+  {
+    "name": "Arcus",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/arcus.png",
+    "w": 68,
+    "h": 52
+  },
+  {
+    "name": "Pinecone",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/pinecone.png",
+    "w": 68,
+    "h": 69
+  },
+  {
+    "name": "Prometheux",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/prometheux.png",
+    "w": 64,
+    "h": 59
+  },
+  {
+    "name": "Ragie.ai",
+    "source": "closed",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/ragie-ai.png",
+    "w": 110,
+    "h": 23
+  },
+  {
+    "name": "SID",
+    "source": "closed",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/sid.png",
+    "w": 69,
+    "h": 30
+  },
+  {
+    "name": "Prometheux",
+    "source": "closed",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/prometheux-2.png",
+    "w": 64,
+    "h": 59
+  }
+];
+const COGNEE = document.querySelector(".brand svg").outerHTML;
+const KINDS = [["graph", "Graph"], ["both", "Both"], ["vector", "Vector"]];
+const ROLES = [["memory", "AI memory"], ["framework", "LLM framework"], ["optimizer", "Optimizer"], ["storage", "Storage"]];
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+// One optical size for every mark: the same area, within a height and a width cap (an icon and a wordmark read alike)
+const size = (w, h) => { const r = w / h; let mh = Math.sqrt(1250 / r), mw = mh * r; if (mh > 32) { mh = 32; mw = mh * r; } if (mw > 92) { mw = 92; mh = mw / r; } return [mw, mh]; };
+const mark = d => {
+  const [w, h] = d.name === "Cognee" ? size(2508, 692) : size(d.w, d.h);
+  return d.name === "Cognee"
+    ? `<span class="mark cognee" role="img" aria-label="cognee" title="cognee" style="width:${w}px;height:${h}px">${COGNEE}</span>`
+    : `<span class="mark" role="img" aria-label="${esc(d.name)}" title="${esc(d.name)}" style="--src:url('${d.mark}');width:${w}px;height:${h}px"></span>`;
+};
+for (const source of ["open", "closed"]) {
+  const sec = document.getElementById(source), grid = sec.querySelector(".grid"), here = DATA.filter(d => d.source === source);
+  sec.querySelector(".sec-head span").textContent = `${here.length} ${here.length === 1 ? "project" : "projects"}`;
+  let h = "";
+  KINDS.forEach(([k, name], i) => { h += `<div class="panel k-${k}" style="grid-column:${i + 2}"></div><div class="col-head label k-${k}" style="grid-column:${i + 2}"><span>${name}</span></div>`; });
+  ROLES.forEach(([r, name], j) => {
+    h += `<div class="row-name label" style="grid-row:${j + 2};grid-column:1">${name}</div>`;
+    KINDS.forEach(([k], i) => { h += `<div class="cell" style="grid-row:${j + 2};grid-column:${i + 2}">${here.filter(d => d.kind === k && d.role === r).map(mark).join("")}</div>`; });
+  });
+  grid.innerHTML = h;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+{
+"allegrograph.png": [
+69,
+68
+],
+"arcus.png": [
+68,
+52
+],
+"baseai.png": [
+119,
+30
+],
+"bondai.png": [
+77,
+58
+],
+"botpress.png": [
+126,
+28
+],
+"chroma.png": [
+72,
+66
+],
+"dspy.png": [
+164,
+47
+],
+"falkordb.png": [
+126,
+35
+],
+"graphlit.png": [
+44,
+71
+],
+"graphrag.png": [
+57,
+54
+],
+"haystack.png": [
+118,
+31
+],
+"hybridagi.png": [
+103,
+34
+],
+"jina-ai.png": [
+78,
+34
+],
+"langchain.png": [
+51,
+26
+],
+"llamaindex.png": [
+57,
+47
+],
+"llongterm.png": [
+98,
+25
+],
+"mem0.png": [
+96,
+23
+],
+"memary.png": [
+73,
+74
+],
+"memgpt.png": [
+59,
+50
+],
+"memonto.png": [
+218,
+42
+],
+"milvus.png": [
+100,
+24
+],
+"nebulagraph.png": [
+127,
+28
+],
+"neo4j.png": [
+70,
+62
+],
+"neon.png": [
+77,
+33
+],
+"ontotext.png": [
+94,
+18
+],
+"oxford-semantic-technologies.png": [
+216,
+55
+],
+"pinecone.png": [
+68,
+69
+],
+"prometheux-2.png": [
+64,
+59
+],
+"prometheux.png": [
+64,
+59
+],
+"qdrant.png": [
+133,
+43
+],
+"ragie-ai.png": [
+110,
+23
+],
+"rasa.png": [
+95,
+37
+],
+"sid.png": [
+69,
+30
+],
+"stardog.png": [
+109,
+55
+],
+"txtai.png": [
+76,
+42
+],
+"vanna-ai.png": [
+59,
+57
+],
+"vectara.png": [
+77,
+73
+],
+"weaviate.png": [
+77,
+59
+],
+"whyhow-ai.png": [
+122,
+34
+],
+"zep-ai.png": [
+39,
+33
+]
+}
