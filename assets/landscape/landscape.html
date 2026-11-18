@@ -6,10 +6,11 @@
 <title>AI memory landscape</title>
 <!--
   The AI memory landscape for github.com/topoteretes/awesome-ai-memory (CLO-1604), in the design system's look on
-  GitHub's dark colours (page #0d1117, panels #161b22, borders #484f58, text #e6edf3 / #8d96a0), so it sits in the
-  README in dark mode. Columns: graph (lavender), both (light), vector (green), as each panel's top bar and label.
-  Every company is a tile: its mark in one colour (--mark), its name under it. Tiles touch, three to a row, and share
-  their lines with the panel edges and row lines. No header or footer: the chart is the two sections.
+  GitHub's dark colours: page and panels #161b22, lines #484f58, text #e6edf3 / #8d96a0. Columns by colour, as each
+  panel's top bar, its label and its marks: graph #eeeeee, both lavender #bc9bff, vector green #8cff86.
+  Every company is a tile: its mark in its column's colour, its name under it. Tiles touch, three to a row, and share
+  their lines with the panel edges and row lines. The row names stand on both sides, leaning on the panels; each
+  section's name is centred over them. No title, counts, legend or footer: the chart is the two sections.
   Companies are DATA below; marks/ holds each one's mark in one colour, from its current logo (Simple Icons, the project's
   GitHub, README or site) or, where none was found, cut from infographic_v7.png. TWK Lausanne is licensed, so it is not in
   this repo: put TWKLausanne-300/700.woff2 in fonts/ (ignored by git) to preview and export. Export: open this page and
@@ -22,9 +23,9 @@
 :root {
   /* the design system's tokens (cognee-*) */
   /* GitHub dark (the README's own colours): page #0d1117, panels #161b22, borders #30363d, text #e6edf3 / #8d96a0 */
-  --page: #0d1117; --panel: #161b22; --fg: #e6edf3; --subtle: #8d96a0; --faint: rgba(230, 237, 243, .40);
+  --page: #161b22; --panel: #161b22;   /* the page the same colour as the panels */ --fg: #e6edf3; --subtle: #8d96a0; --faint: rgba(230, 237, 243, .40);
   --frame: #484f58; --frame-strong: #6e7681;   /* GitHub's stronger borders: the table reads clearly */
-  --lavender: #bc9bff; --green: #8cff86;
+  --lavender: #bc9bff; --green: #8cff86; --grey: #eeeeee;   /* graph */
   /* on dark, the brand colours read as text as they are */
   --lavender-ink: #bc9bff; --green-ink: #8cff86;
   --mark: var(--fg);
@@ -32,7 +33,7 @@
   --font: TWKLausanne, "Helvetica Neue", Arial, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; }
-body { background: #0d1117; font-family: var(--font); color: var(--fg); -webkit-font-smoothing: antialiased; }
+body { background: #161b22; font-family: var(--font); color: var(--fg); -webkit-font-smoothing: antialiased; }
 #chart { width: 1100px;   /* as tall as its content */ padding: 44px 48px 36px; display: flex; flex-direction: column; background: var(--page) var(--grid); background-size: 16px 16px; }
 /* the label: 11/16, bold, uppercase, spaced (SectionLabel) */
 .label { font: 700 11px/16px var(--font); letter-spacing: .05em; text-transform: uppercase; }
@@ -48,17 +49,20 @@ header { display: none; }
 header + section { margin-top: 0; }   /* nothing above the first section now */
 .brand svg { display: block; height: 20px; width: auto; }
 section { flex: 0 0 auto; display: flex; flex-direction: column; min-height: 0; margin-top: 28px; }
-.sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.sec-head { display: flex; justify-content: center; align-items: baseline; gap: 10px; margin-bottom: 12px; }   /* centred over the panels */
 .sec-head h2 { font: 300 20px/28px var(--font); }                              /* SectionHeader, text-xl */
 .sec-head span { font: 300 14px/20px var(--font); color: var(--subtle); }
-.grid { flex: 0 0 auto; align-content: start; display: grid; grid-template-columns: 112px repeat(3, 1fr); grid-template-rows: auto repeat(4, auto);   /* each row as tall as its tiles */ column-gap: 12px; }
+.grid { flex: 0 0 auto; align-content: start; display: grid; grid-template-columns: 112px repeat(3, 1fr) 112px;   /* the row names on both sides */ grid-template-rows: auto repeat(4, auto);   /* each row as tall as its tiles */ column-gap: 12px; }
 .panel { grid-row: 1 / -1; background: var(--panel); border: 1px solid var(--frame); position: relative; }
 .panel::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 2px; }
-.k-graph.panel::before { background: var(--lavender); } .k-vector.panel::before { background: var(--green); } .k-both.panel::before { background: var(--fg); }
+.k-graph.panel::before { background: var(--grey); } .k-vector.panel::before { background: var(--green); } .k-both.panel::before { background: var(--lavender); }
 .col-head { grid-row: 1; padding: 12px 14px 10px; z-index: 1; }
-.col-head.k-graph { color: var(--lavender-ink); } .col-head.k-vector { color: var(--green-ink); } .col-head.k-both { color: var(--fg); }
+.col-head.k-graph { color: var(--grey); } .col-head.k-vector { color: var(--green-ink); } .col-head.k-both { color: var(--lavender-ink); }
 .row-name { padding: 13px 0 0; color: var(--subtle); border-top: 1px solid var(--frame); z-index: 1; }
+.row-name { text-align: right; }   /* the row names lean on the panels: the left ones end at the graph panel… */
+.row-name.right { text-align: left; }   /* …the right ones start at the vector panel */
 .cell { padding: 0; border-top: 1px solid var(--frame);   /* tiles run to the panel edges and the row lines */ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-content: start; gap: 0; z-index: 1; min-height: 46px; }   /* the marks on a grid, three to a row */
+.cell.k-graph { --mark: var(--grey); } .cell.k-both { --mark: var(--lavender); } .cell.k-vector { --mark: var(--green); }   /* each mark in its column's colour: graph grey, both lavender, vector green */
 .mark { display: block; background: var(--mark); -webkit-mask: var(--src) center / contain no-repeat; mask: var(--src) center / contain no-repeat; }
 .mark.cognee { background: none; color: var(--mark); }
 .mark.cognee svg { display: block; width: 100%; height: 100%; }
@@ -74,8 +78,8 @@ footer { display: flex; justify-content: space-between; margin-top: 18px; font: 
   <header>
     <div class="brand" aria-label="cognee"><svg viewBox="0 0 3049 763" fill="currentColor" aria-hidden="true"><rect x="547.269" y="458.438" width="151.076" height="151.076"></rect><rect x="547.269" y="611.25" width="151.076" height="151.076"></rect><rect x="547.269" y="152.817" width="151.076" height="151.076"></rect><rect x="852.888" y="152.817" width="151.076" height="151.076"></rect><rect x="852.888" y="457.739" width="151.076" height="151.076"></rect><rect x="547.269" y="305.625" width="151.076" height="151.076"></rect><rect x="700.073" y="609.857" width="151.076" height="151.076"></rect><rect x="852.888" y="609.857" width="151.076" height="151.076"></rect><rect x="547.269" y="0" width="151.076" height="151.076"></rect><rect x="700.083" y="0" width="151.076" height="151.076"></rect><rect x="852.888" y="0" width="151.076" height="151.076"></rect><rect x="852.888" y="304.936" width="151.076" height="151.076"></rect><rect x="0" y="458.438" width="151.076" height="151.076"></rect><rect x="0" y="611.25" width="151.076" height="151.076"></rect><rect x="0" y="152.817" width="151.076" height="151.076"></rect><rect x="0" y="305.625" width="151.076" height="151.076"></rect><rect x="152.805" y="609.857" width="151.076" height="151.076"></rect><rect x="305.609" y="609.857" width="151.076" height="151.076"></rect><rect x="0" y="0" width="151.076" height="151.076"></rect><rect x="152.814" y="0" width="151.076" height="151.076"></rect><rect x="305.609" y="0" width="151.076" height="151.076"></rect><rect x="1094.53" y="458.438" width="151.076" height="151.076"></rect><rect x="1094.53" y="611.25" width="151.076" height="151.076"></rect><rect x="1094.53" y="152.809" width="151.076" height="151.076"></rect><rect x="1094.53" y="305.625" width="151.076" height="151.076"></rect><rect x="1247.37" y="609.857" width="151.076" height="151.076"></rect><rect x="1400.17" y="458.438" width="151.076" height="151.076"></rect><rect x="1400.17" y="611.25" width="151.076" height="151.076"></rect><rect x="1094.53" y="0" width="151.076" height="151.076"></rect><rect x="1247.37" y="0" width="151.076" height="151.076"></rect><rect x="1400.17" y="0" width="151.076" height="151.076"></rect><rect x="1641.8" y="458.438" width="151.076" height="151.076"></rect><rect x="1641.8" y="611.25" width="151.076" height="151.076"></rect><rect x="1641.8" y="152.809" width="151.076" height="151.076"></rect><rect x="1641.8" y="0" width="151.076" height="151.076"></rect><rect x="1641.8" y="305.625" width="151.076" height="151.076"></rect><rect x="1794.61" y="304.936" width="151.076" height="151.076"></rect><rect x="1948.48" y="458.091" width="151.076" height="151.076"></rect><rect x="2104.42" y="152.461" width="151.076" height="151.076"></rect><rect x="2104.42" y="305.625" width="151.076" height="151.076"></rect><rect x="2104.42" y="457.392" width="151.076" height="151.076"></rect><rect x="2104.42" y="611.25" width="151.076" height="151.076"></rect><rect x="2104.42" y="0" width="151.076" height="151.076"></rect><rect x="2348.13" y="458.438" width="151.076" height="151.076"></rect><rect x="2348.13" y="608.364" width="151.076" height="151.076"></rect><rect x="2348.13" y="305.625" width="151.076" height="151.076"></rect><rect x="2348.68" y="0" width="151.076" height="151.076"></rect><rect x="2501.47" y="0" width="151.076" height="151.076"></rect><rect x="2501.47" y="609.857" width="151.076" height="151.076"></rect><rect x="2501.47" y="304.936" width="151.076" height="151.076"></rect><rect x="2348.13" y="152.809" width="151.076" height="151.076"></rect><rect x="2744.43" y="458.438" width="151.076" height="151.076"></rect><rect x="2744.43" y="608.364" width="151.076" height="151.076"></rect><rect x="2744.43" y="305.625" width="151.076" height="151.076"></rect><rect x="2744.98" y="0" width="151.076" height="151.076"></rect><rect x="2897.77" y="0" width="151.076" height="151.076"></rect><rect x="2897.77" y="609.857" width="151.076" height="151.076"></rect><rect x="2897.77" y="304.936" width="151.076" height="151.076"></rect><rect x="2744.43" y="152.809" width="151.076" height="151.076"></rect></svg></div>
   </header>
-  <section id="open"><div class="sec-head"><h2>Open source</h2><span></span></div><div class="grid"></div></section>
-  <section id="closed"><div class="sec-head"><h2>Closed source</h2><span></span></div><div class="grid"></div></section>
+  <section id="open"><div class="sec-head"><h2>Open source</h2></div><div class="grid"></div></section>
+  <section id="closed"><div class="sec-head"><h2>Closed source</h2></div><div class="grid"></div></section>
   
 </div>
 <script>
@@ -464,12 +468,12 @@ const mark = d => {
 };
 for (const source of ["open", "closed"]) {
   const sec = document.getElementById(source), grid = sec.querySelector(".grid"), here = DATA.filter(d => d.source === source);
-  sec.querySelector(".sec-head span").textContent = `${here.length} ${here.length === 1 ? "project" : "projects"}`;
   let h = "";
   KINDS.forEach(([k, name], i) => { h += `<div class="panel k-${k}" style="grid-column:${i + 2}"></div><div class="col-head label k-${k}" style="grid-column:${i + 2}"><span>${name}</span></div>`; });
   ROLES.forEach(([r, name], j) => {
     h += `<div class="row-name label" style="grid-row:${j + 2};grid-column:1">${name}</div>`;
-    KINDS.forEach(([k], i) => { h += `<div class="cell" style="grid-row:${j + 2};grid-column:${i + 2}">${here.filter(d => d.kind === k && d.role === r).map(mark).join("")}</div>`; });
+    h += `<div class="row-name label right" style="grid-row:${j + 2};grid-column:5" aria-hidden="true">${name}</div>`;
+    KINDS.forEach(([k], i) => { h += `<div class="cell k-${k}" style="grid-row:${j + 2};grid-column:${i + 2}">${here.filter(d => d.kind === k && d.role === r).map(mark).join("")}</div>`; });
   });
   grid.innerHTML = h;
 }
