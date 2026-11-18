@@ -14,8 +14,8 @@
   Companies are DATA below; marks/ holds each one's mark in one colour, from its current logo (Simple Icons, the project's
   GitHub, README or site) or, where none was found, cut from infographic_v7.png. TWK Lausanne is licensed, so it is not in
   this repo: put TWKLausanne-300/700.woff2 in fonts/ (ignored by git) to preview and export. Export: open this page and
-  screenshot #chart at 2317 / 1100 device pixels per CSS pixel. The chart is 1100 wide and as tall as its content
-  (1046 now), so the PNG is 2317 wide (2317 × 2203 now).
+  screenshot #chart at 2317 / 1100 device pixels per CSS pixel. The chart is 1100 wide with a 16px safe space all round,
+  and as tall as its content (998 now), so the PNG is 2317 wide (2317 × 2102 now).
 -->
 <style>
 @font-face { font-family: TWKLausanne; font-weight: 300; src: local("TWK Lausanne Light"), url(fonts/TWKLausanne-300.woff2) format("woff2"); }
@@ -34,7 +34,7 @@
 }
 * { box-sizing: border-box; margin: 0; }
 body { background: #161b22; font-family: var(--font); color: var(--fg); -webkit-font-smoothing: antialiased; }
-#chart { width: 1100px;   /* as tall as its content */ padding: 44px 48px 36px; display: flex; flex-direction: column; background: var(--page) var(--grid); background-size: 16px 16px; }
+#chart { width: 1100px;   /* as tall as its content */ padding: 16px;   /* minimum safe space around the chart */ display: flex; flex-direction: column; background: var(--page) var(--grid); background-size: 16px 16px; }
 /* the label: 11/16, bold, uppercase, spaced (SectionLabel) */
 .label { font: 700 11px/16px var(--font); letter-spacing: .05em; text-transform: uppercase; }
 header { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
