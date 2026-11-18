@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI memory landscape</title>
+<!--
+  The AI memory landscape for github.com/topoteretes/awesome-ai-memory (CLO-1604), in the design system's look on
+  GitHub's dark colours: page and panels #161b22, lines #484f58, text #e6edf3 / #8d96a0. Columns by colour, as each
+  panel's top bar, its label and its marks: graph #eeeeee, both lavender #bc9bff, vector green #8cff86.
+  Every company is a tile: its mark in its column's colour, its name under it. Tiles touch, three to a row, and share
+  their lines with the panel edges and row lines. The row names stand on both sides, leaning on the panels; each
+  section's name is centred over them. No title, counts, legend or footer: the chart is the two sections.
+  Companies are DATA below; marks/ holds each one's mark in one colour, from its current logo (Simple Icons, the project's
+  GitHub, README or site) or, where none was found, cut from infographic_v7.png. TWK Lausanne is licensed, so it is not in
+  this repo: put TWKLausanne-300/700.woff2 in fonts/ (ignored by git) to preview and export. Export: open this page and
+  screenshot #chart at 2317 / 1100 device pixels per CSS pixel. The chart is 1100 wide with a 16px safe space all round,
+  and as tall as its content (998 now), so the PNG is 2317 wide (2317 × 2102 now).
+-->
+<style>
+@font-face { font-family: TWKLausanne; font-weight: 300; src: local("TWK Lausanne Light"), url(fonts/TWKLausanne-300.woff2) format("woff2"); }
+@font-face { font-family: TWKLausanne; font-weight: 700; src: local("TWK Lausanne Bold"), url(fonts/TWKLausanne-700.woff2) format("woff2"); }
+:root {
+  /* the design system's tokens (cognee-*) */
+  /* GitHub dark (the README's own colours): page #0d1117, panels #161b22, borders #30363d, text #e6edf3 / #8d96a0 */
+  --page: #161b22; --panel: #161b22;   /* the page the same colour as the panels */ --fg: #e6edf3; --subtle: #8d96a0; --faint: rgba(230, 237, 243, .40);
+  --frame: #484f58; --frame-strong: #6e7681;   /* GitHub's stronger borders: the table reads clearly */
+  --lavender: #bc9bff; --green: #8cff86; --grey: #eeeeee;   /* graph */
+  /* on dark, the brand colours read as text as they are */
+  --lavender-ink: #bc9bff; --green-ink: #8cff86;
+  --mark: var(--fg);
+  --grid: linear-gradient(rgba(230, 237, 243, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(230, 237, 243, .04) 1px, transparent 1px);
+  --font: TWKLausanne, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; }
+body { background: #161b22; font-family: var(--font); color: var(--fg); -webkit-font-smoothing: antialiased; }
+#chart { width: 1100px;   /* as tall as its content */ padding: 16px;   /* minimum safe space around the chart */ display: flex; flex-direction: column; background: var(--page) var(--grid); background-size: 16px 16px; }
+/* the label: 11/16, bold, uppercase, spaced (SectionLabel) */
+.label { font: 700 11px/16px var(--font); letter-spacing: .05em; text-transform: uppercase; }
+header { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+header .label { color: var(--lavender-ink); }
+header h1 { margin-top: 8px; font: 300 38px/46px var(--font); }                 /* text-display */
+header p { margin-top: 8px; font: 300 14px/20px var(--font); color: var(--subtle); max-width: 620px; }   /* text-sm */
+.legend { display: flex; gap: 20px; margin-top: 14px; }
+.legend span { display: flex; align-items: center; gap: 8px; font: 300 14px/20px var(--font); color: var(--subtle); }
+.legend i { width: 10px; height: 10px; }
+.brand { display: none; }   /* no logotype in the header (CLO-1604); its svg is kept as the source for the cognee tile */
+header { display: none; }
+header + section { margin-top: 0; }   /* nothing above the first section now */
+.brand svg { display: block; height: 20px; width: auto; }
+section { flex: 0 0 auto; display: flex; flex-direction: column; min-height: 0; margin-top: 28px; }
+.sec-head { display: flex; justify-content: center; align-items: baseline; gap: 10px; margin-bottom: 12px; }   /* centred over the panels */
+.sec-head h2 { font: 300 20px/28px var(--font); }                              /* SectionHeader, text-xl */
+.sec-head span { font: 300 14px/20px var(--font); color: var(--subtle); }
+.grid { flex: 0 0 auto; align-content: start; display: grid; grid-template-columns: 112px repeat(3, 1fr) 112px;   /* the row names on both sides */ grid-template-rows: auto repeat(4, auto);   /* each row as tall as its tiles */ column-gap: 12px; }
+.panel { grid-row: 1 / -1; background: var(--panel); border: 1px solid var(--frame); position: relative; }
+.panel::before { content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 2px; }
+.k-graph.panel::before { background: var(--grey); } .k-vector.panel::before { background: var(--green); } .k-both.panel::before { background: var(--lavender); }
+.col-head { grid-row: 1; padding: 12px 14px 10px; z-index: 1; }
+.col-head.k-graph { color: var(--grey); } .col-head.k-vector { color: var(--green-ink); } .col-head.k-both { color: var(--lavender-ink); }
+.row-name { padding: 13px 0 0; color: var(--subtle); border-top: 1px solid var(--frame); z-index: 1; }
+.row-name { text-align: right; }   /* the row names lean on the panels: the left ones end at the graph panel… */
+.row-name.right { text-align: left; }   /* …the right ones start at the vector panel */
+.cell { padding: 0; border-top: 1px solid var(--frame);   /* tiles run to the panel edges and the row lines */ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-content: start; gap: 0; z-index: 1; min-height: 46px; }   /* the marks on a grid, three to a row */
+.cell.k-graph { --mark: var(--grey); } .cell.k-both { --mark: var(--lavender); } .cell.k-vector { --mark: var(--green); }   /* each mark in its column's colour: graph grey, both lavender, vector green */
+.mark { display: block; background: var(--mark); -webkit-mask: var(--src) center / contain no-repeat; mask: var(--src) center / contain no-repeat; }
+.mark.cognee { background: none; color: var(--mark); }
+.mark.cognee svg { display: block; width: 100%; height: 100%; }
+/* each company: a tile of one height with a hairline frame, its mark centred and its name under it (CLO-1604) */
+.co { margin: 0 0 -1px 0; height: 77px;   /* only right and bottom lines: the panel edge and the row line close the rest, so every line is one hairline */ padding: 10px 6px 8px; border: 0; border-right: 1px solid var(--frame); border-bottom: 1px solid var(--frame); background: transparent;   /* the panel behind is the fill; a filled tile would paint over the line of the tile above */ display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-width: 0; }
+.co .box { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; max-width: 100%; }
+.co figcaption { font: 300 10px/12px var(--font); color: var(--subtle); text-align: center; max-width: 100%; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+footer { display: flex; justify-content: space-between; margin-top: 18px; font: 300 12px/20px var(--font); color: var(--faint); }   /* text-xs */
+</style>
+</head>
+<body>
+<div id="chart">
+  <header>
+    <div class="brand" aria-label="cognee"><svg viewBox="0 0 3049 763" fill="currentColor" aria-hidden="true"><rect x="547.269" y="458.438" width="151.076" height="151.076"></rect><rect x="547.269" y="611.25" width="151.076" height="151.076"></rect><rect x="547.269" y="152.817" width="151.076" height="151.076"></rect><rect x="852.888" y="152.817" width="151.076" height="151.076"></rect><rect x="852.888" y="457.739" width="151.076" height="151.076"></rect><rect x="547.269" y="305.625" width="151.076" height="151.076"></rect><rect x="700.073" y="609.857" width="151.076" height="151.076"></rect><rect x="852.888" y="609.857" width="151.076" height="151.076"></rect><rect x="547.269" y="0" width="151.076" height="151.076"></rect><rect x="700.083" y="0" width="151.076" height="151.076"></rect><rect x="852.888" y="0" width="151.076" height="151.076"></rect><rect x="852.888" y="304.936" width="151.076" height="151.076"></rect><rect x="0" y="458.438" width="151.076" height="151.076"></rect><rect x="0" y="611.25" width="151.076" height="151.076"></rect><rect x="0" y="152.817" width="151.076" height="151.076"></rect><rect x="0" y="305.625" width="151.076" height="151.076"></rect><rect x="152.805" y="609.857" width="151.076" height="151.076"></rect><rect x="305.609" y="609.857" width="151.076" height="151.076"></rect><rect x="0" y="0" width="151.076" height="151.076"></rect><rect x="152.814" y="0" width="151.076" height="151.076"></rect><rect x="305.609" y="0" width="151.076" height="151.076"></rect><rect x="1094.53" y="458.438" width="151.076" height="151.076"></rect><rect x="1094.53" y="611.25" width="151.076" height="151.076"></rect><rect x="1094.53" y="152.809" width="151.076" height="151.076"></rect><rect x="1094.53" y="305.625" width="151.076" height="151.076"></rect><rect x="1247.37" y="609.857" width="151.076" height="151.076"></rect><rect x="1400.17" y="458.438" width="151.076" height="151.076"></rect><rect x="1400.17" y="611.25" width="151.076" height="151.076"></rect><rect x="1094.53" y="0" width="151.076" height="151.076"></rect><rect x="1247.37" y="0" width="151.076" height="151.076"></rect><rect x="1400.17" y="0" width="151.076" height="151.076"></rect><rect x="1641.8" y="458.438" width="151.076" height="151.076"></rect><rect x="1641.8" y="611.25" width="151.076" height="151.076"></rect><rect x="1641.8" y="152.809" width="151.076" height="151.076"></rect><rect x="1641.8" y="0" width="151.076" height="151.076"></rect><rect x="1641.8" y="305.625" width="151.076" height="151.076"></rect><rect x="1794.61" y="304.936" width="151.076" height="151.076"></rect><rect x="1948.48" y="458.091" width="151.076" height="151.076"></rect><rect x="2104.42" y="152.461" width="151.076" height="151.076"></rect><rect x="2104.42" y="305.625" width="151.076" height="151.076"></rect><rect x="2104.42" y="457.392" width="151.076" height="151.076"></rect><rect x="2104.42" y="611.25" width="151.076" height="151.076"></rect><rect x="2104.42" y="0" width="151.076" height="151.076"></rect><rect x="2348.13" y="458.438" width="151.076" height="151.076"></rect><rect x="2348.13" y="608.364" width="151.076" height="151.076"></rect><rect x="2348.13" y="305.625" width="151.076" height="151.076"></rect><rect x="2348.68" y="0" width="151.076" height="151.076"></rect><rect x="2501.47" y="0" width="151.076" height="151.076"></rect><rect x="2501.47" y="609.857" width="151.076" height="151.076"></rect><rect x="2501.47" y="304.936" width="151.076" height="151.076"></rect><rect x="2348.13" y="152.809" width="151.076" height="151.076"></rect><rect x="2744.43" y="458.438" width="151.076" height="151.076"></rect><rect x="2744.43" y="608.364" width="151.076" height="151.076"></rect><rect x="2744.43" y="305.625" width="151.076" height="151.076"></rect><rect x="2744.98" y="0" width="151.076" height="151.076"></rect><rect x="2897.77" y="0" width="151.076" height="151.076"></rect><rect x="2897.77" y="609.857" width="151.076" height="151.076"></rect><rect x="2897.77" y="304.936" width="151.076" height="151.076"></rect><rect x="2744.43" y="152.809" width="151.076" height="151.076"></rect></svg></div>
+  </header>
+  <section id="open"><div class="sec-head"><h2>Open source</h2></div><div class="grid"></div></section>
+  <section id="closed"><div class="sec-head"><h2>Closed source</h2></div><div class="grid"></div></section>
+  
+</div>
+<script>
+const DATA = [
+  {
+    "name": "Memary",
+    "source": "open",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/memary.png",
+    "w": 213,
+    "h": 219
+  },
+  {
+    "name": "llongterm",
+    "source": "open",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/llongterm.png",
+    "w": 98,
+    "h": 25
+  },
+  {
+    "name": "Memonto",
+    "source": "open",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/memonto.png",
+    "w": 914,
+    "h": 231
+  },
+  {
+    "name": "Neo4j",
+    "source": "open",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/neo4j.png",
+    "w": 480,
+    "h": 450
+  },
+  {
+    "name": "NebulaGraph",
+    "source": "open",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/nebulagraph.png",
+    "w": 127,
+    "h": 28
+  },
+  {
+    "name": "FalkorDB",
+    "source": "open",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/falkordb.png",
+    "w": 287,
+    "h": 262
+  },
+  {
+    "name": "Cognee",
+    "source": "open",
+    "kind": "both",
+    "role": "memory"
+  },
+  {
+    "name": "HybridAGI",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/hybridagi.png",
+    "w": 103,
+    "h": 34
+  },
+  {
+    "name": "Zep AI",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/zep-ai.png",
+    "w": 264,
+    "h": 221
+  },
+  {
+    "name": "GraphRAG",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/graphrag.png",
+    "w": 57,
+    "h": 54
+  },
+  {
+    "name": "mem0",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/mem0.png",
+    "w": 257,
+    "h": 256
+  },
+  {
+    "name": "MemGPT",
+    "source": "open",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/memgpt.png",
+    "w": 198,
+    "h": 198
+  },
+  {
+    "name": "LlamaIndex",
+    "source": "open",
+    "kind": "both",
+    "role": "framework",
+    "mark": "marks/llamaindex.png",
+    "w": 215,
+    "h": 261
+  },
+  {
+    "name": "Rasa",
+    "source": "open",
+    "kind": "both",
+    "role": "framework",
+    "mark": "marks/rasa.png",
+    "w": 480,
+    "h": 218
+  },
+  {
+    "name": "LangChain",
+    "source": "open",
+    "kind": "both",
+    "role": "framework",
+    "mark": "marks/langchain.png",
+    "w": 350,
+    "h": 480
+  },
+  {
+    "name": "Vanna.AI",
+    "source": "open",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/vanna-ai.png",
+    "w": 332,
+    "h": 330
+  },
+  {
+    "name": "txtai",
+    "source": "open",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/txtai.png",
+    "w": 76,
+    "h": 42
+  },
+  {
+    "name": "BondAI",
+    "source": "open",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/bondai.png",
+    "w": 590,
+    "h": 510
+  },
+  {
+    "name": "BaseAI",
+    "source": "open",
+    "kind": "vector",
+    "role": "framework",
+    "mark": "marks/baseai.png",
+    "w": 119,
+    "h": 30
+  },
+  {
+    "name": "Haystack",
+    "source": "open",
+    "kind": "vector",
+    "role": "framework",
+    "mark": "marks/haystack.png",
+    "w": 480,
+    "h": 480
+  },
+  {
+    "name": "Botpress",
+    "source": "open",
+    "kind": "vector",
+    "role": "framework",
+    "mark": "marks/botpress.png",
+    "w": 200,
+    "h": 228
+  },
+  {
+    "name": "DSPy",
+    "source": "open",
+    "kind": "vector",
+    "role": "optimizer",
+    "mark": "marks/dspy.png",
+    "w": 607,
+    "h": 195
+  },
+  {
+    "name": "Jina AI",
+    "source": "open",
+    "kind": "vector",
+    "role": "optimizer",
+    "mark": "marks/jina-ai.png",
+    "w": 315,
+    "h": 134
+  },
+  {
+    "name": "Qdrant",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/qdrant.png",
+    "w": 416,
+    "h": 480
+  },
+  {
+    "name": "Weaviate",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/weaviate.png",
+    "w": 354,
+    "h": 214
+  },
+  {
+    "name": "Chroma",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/chroma.png",
+    "w": 238,
+    "h": 158
+  },
+  {
+    "name": "Neon",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/neon.png",
+    "w": 480,
+    "h": 480
+  },
+  {
+    "name": "Milvus",
+    "source": "open",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/milvus.png",
+    "w": 480,
+    "h": 320
+  },
+  {
+    "name": "Oxford Semantic Technologies",
+    "source": "closed",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/oxford-semantic-technologies.png",
+    "w": 176,
+    "h": 176
+  },
+  {
+    "name": "Stardog",
+    "source": "closed",
+    "kind": "graph",
+    "role": "storage",
+    "mark": "marks/stardog.png",
+    "w": 270,
+    "h": 267
+  },
+  {
+    "name": "AllegroGraph",
+    "source": "closed",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/allegrograph.png",
+    "w": 335,
+    "h": 331
+  },
+  {
+    "name": "Ontotext",
+    "source": "closed",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/ontotext.png",
+    "w": 94,
+    "h": 18
+  },
+  {
+    "name": "WhyHow.AI",
+    "source": "closed",
+    "kind": "graph",
+    "role": "memory",
+    "mark": "marks/whyhow-ai.png",
+    "w": 122,
+    "h": 34
+  },
+  {
+    "name": "Graphlit",
+    "source": "closed",
+    "kind": "both",
+    "role": "memory",
+    "mark": "marks/graphlit.png",
+    "w": 189,
+    "h": 311
+  },
+  {
+    "name": "Vectara",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/vectara.png",
+    "w": 327,
+    "h": 285
+  },
+  {
+    "name": "Arcus",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/arcus.png",
+    "w": 68,
+    "h": 52
+  },
+  {
+    "name": "Pinecone",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/pinecone.png",
+    "w": 106,
+    "h": 119
+  },
+  {
+    "name": "Prometheux",
+    "source": "closed",
+    "kind": "vector",
+    "role": "storage",
+    "mark": "marks/prometheux.png",
+    "w": 114,
+    "h": 116
+  },
+  {
+    "name": "Ragie.ai",
+    "source": "closed",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/ragie-ai.png",
+    "w": 173,
+    "h": 163
+  },
+  {
+    "name": "SID",
+    "source": "closed",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/sid.png",
+    "w": 480,
+    "h": 272
+  },
+  {
+    "name": "Prometheux",
+    "source": "closed",
+    "kind": "vector",
+    "role": "memory",
+    "mark": "marks/prometheux-2.png",
+    "w": 114,
+    "h": 116
+  }
+];
+const COGNEE = document.querySelector(".brand svg").outerHTML;
+const KINDS = [["graph", "Graph"], ["both", "Both"], ["vector", "Vector"]];
+const ROLES = [["memory", "AI memory"], ["framework", "LLM framework"], ["optimizer", "Optimizer"], ["storage", "Storage"]];
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+// One optical size for every mark: the same area, within a height and a width cap (an icon and a wordmark read alike)
+const size = (w, h) => { const r = w / h; let mh = Math.sqrt(900 / r), mw = mh * r; if (mh > 28) { mh = 28; mw = mh * r; } if (mw > 66) { mw = 66; mh = mw / r; } return [mw, mh]; };
+const mark = d => {
+  const [w, h] = d.name === "Cognee" ? size(3049, 763) : size(d.w, d.h);
+  const name = d.name === "Cognee" ? "cognee" : d.name;
+  // The name under the mark names it, so the mark itself is decoration.
+  const m = d.name === "Cognee"
+    ? `<span class="mark cognee" aria-hidden="true" style="width:${w}px;height:${h}px">${COGNEE}</span>`
+    : `<span class="mark" aria-hidden="true" style="--src:url('${d.mark}');width:${w}px;height:${h}px"></span>`;
+  return `<figure class="co"><span class="box">${m}</span><figcaption>${esc(name)}</figcaption></figure>`;
+};
+for (const source of ["open", "closed"]) {
+  const sec = document.getElementById(source), grid = sec.querySelector(".grid"), here = DATA.filter(d => d.source === source);
+  let h = "";
+  KINDS.forEach(([k, name], i) => { h += `<div class="panel k-${k}" style="grid-column:${i + 2}"></div><div class="col-head label k-${k}" style="grid-column:${i + 2}"><span>${name}</span></div>`; });
+  ROLES.forEach(([r, name], j) => {
+    h += `<div class="row-name label" style="grid-row:${j + 2};grid-column:1">${name}</div>`;
+    h += `<div class="row-name label right" style="grid-row:${j + 2};grid-column:5" aria-hidden="true">${name}</div>`;
+    KINDS.forEach(([k], i) => { h += `<div class="cell k-${k}" style="grid-row:${j + 2};grid-column:${i + 2}">${here.filter(d => d.kind === k && d.role === r).map(mark).join("")}</div>`; });
+  });
+  grid.innerHTML = h;
+}
+</script>
+</body>
+</html>
