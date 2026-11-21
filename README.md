@@ -205,6 +205,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Sentra | Organization-wide memory for teams and AI agents: bi-temporal fact graph built from 200+ connected tools, served over REST and MCP | https://www.sentra.app/ | Closed | | Memory Tool | Graph, Vector |
 | MemoryRouter | Hosted persistent memory shared across Claude, ChatGPT, coding agents, and any MCP client through a remote MCP server | https://memoryrouter.ai/ | Closed | https://github.com/John-Rood/memoryrouter-sdk | Memory Tool | Vector |
 | Famfol | Shared on-device memory for AI apps on Mac (Claude Code, Codex, Cursor) over MCP, with provenance and a review queue | https://famfol.com/ | Closed | | Memory Tool | Vector |
+| m2b | Personal second brain for Claude Code across projects and machines: notes said in a session land in a Markdown inbox, a background run files them into a short distillate every later session starts with, with full-text search over the archive | https://github.com/Kolibee-GmbH/m2b | Open source | https://github.com/Kolibee-GmbH/m2b | Memory Tool | Keyword |
 
 ## LLM frameworks
 
