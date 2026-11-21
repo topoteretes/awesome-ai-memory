@@ -216,6 +216,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | PraisonAI | Multi-agent framework for building and orchestrating AI agents | https://docs.praison.ai/ | Open source | https://github.com/MervinPraison/PraisonAI | LLM Framework | Graph, Vector |
 | Rasa | Open-source framework for conversational assistants | https://rasa.com/ | Open source | https://github.com/RasaHQ/ | LLM Framework | Graph, Vector |
 | Autohand Code CLI | Open-source terminal coding agent with built-in persistent memory; 15+ model providers and local models | https://www.autohand.ai/code/ | Open source | https://github.com/autohandai/code-cli | LLM Framework | Vector |
+| CriogenAI | Open-source AI agent framework on a Rust engine (Python, TypeScript, Rust) with long-term memory per user, keyword and semantic search, and document collections, stored in SQLite or Postgres with optional encryption | https://criogenai.com/ | Open source | https://github.com/VARMAMASTER/criogenai | LLM Framework | Vector |
 
 ## Optimizers
 
