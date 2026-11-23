@@ -205,6 +205,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Sentra | Organization-wide memory for teams and AI agents: bi-temporal fact graph built from 200+ connected tools, served over REST and MCP | https://www.sentra.app/ | Closed | | Memory Tool | Graph, Vector |
 | MemoryRouter | Hosted persistent memory shared across Claude, ChatGPT, coding agents, and any MCP client through a remote MCP server | https://memoryrouter.ai/ | Closed | https://github.com/John-Rood/memoryrouter-sdk | Memory Tool | Vector |
 | Famfol | Shared on-device memory for AI apps on Mac (Claude Code, Codex, Cursor) over MCP, with provenance and a review queue | https://famfol.com/ | Closed | | Memory Tool | Vector |
+| ZizkaDB | Auditable memory for AI agents: every event is stored in a tamper-evident, hash-chained log linked to the event that caused it; why() traces any decision to its causes, at() reconstructs past state, context_for() returns relevant memory for a task, forget() deletes on request. SDKs and an MCP server | https://db.zizka.ai/ | Managed, Open source | https://github.com/ZIZKA-AI-SL/ZizkaDB | Memory Tool | Keyword, Vector |
 
 ## LLM frameworks
 
