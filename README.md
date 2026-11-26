@@ -206,6 +206,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | MemoryRouter | Hosted persistent memory shared across Claude, ChatGPT, coding agents, and any MCP client through a remote MCP server | https://memoryrouter.ai/ | Closed | https://github.com/John-Rood/memoryrouter-sdk | Memory Tool | Vector |
 | Famfol | Shared on-device memory for AI apps on Mac (Claude Code, Codex, Cursor) over MCP, with provenance and a review queue | https://famfol.com/ | Closed | | Memory Tool | Vector |
 
+| Keepfold | Local-first memory shared by Claude, Cursor, Codex and Gemini CLI over MCP, kept as plain Markdown and JSONL files in a folder you pick (Obsidian-compatible), with SQLite FTS5 and local semantic search; Windows app | https://github.com/alenissacsam-2/keepfold | Open source | https://github.com/alenissacsam-2/keepfold | Memory Tool | Files, Vector |
 ## LLM frameworks
 
 | Name | Description | URL | Open / Close | GitHub URL | Category | Storage |
