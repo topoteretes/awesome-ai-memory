@@ -79,6 +79,7 @@ Please open a pull request
 | StarDog                       | https://www.stardog.com/                 | Closed             |                                                 | Storage         | Graph         |
 | supabase                      | https://supabase.com/                    | Open source        | https://github.com/supabase                     | Storage         | Vector        |
 | llongterm                      | https://www.llongterm.com/                    | Closed       |                      | Memory Tool         | Graph         |
+| MemorySync                     | https://memorysync.io                         | Closed       | https://github.com/memorysyncio                | Memory Tool     | Vector        |
 Have anything to add? See the [Contributing](#contributing) section.
 
 ## Contents
@@ -205,6 +206,7 @@ Implementations differ mainly in how they store and retrieve this memory: **vect
 | Sentra | Organization-wide memory for teams and AI agents: bi-temporal fact graph built from 200+ connected tools, served over REST and MCP | https://www.sentra.app/ | Closed | | Memory Tool | Graph, Vector |
 | MemoryRouter | Hosted persistent memory shared across Claude, ChatGPT, coding agents, and any MCP client through a remote MCP server | https://memoryrouter.ai/ | Closed | https://github.com/John-Rood/memoryrouter-sdk | Memory Tool | Vector |
 | Famfol | Shared on-device memory for AI apps on Mac (Claude Code, Codex, Cursor) over MCP, with provenance and a review queue | https://famfol.com/ | Closed | | Memory Tool | Vector |
+| MemorySync | API and SDK infrastructure for storing, retrieving, updating, deleting, governing, and inspecting memory used by AI applications | https://memorysync.io | Closed | https://github.com/memorysyncio | Memory Tool | Vector |
 
 ## LLM frameworks
 
