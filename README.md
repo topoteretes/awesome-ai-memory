@@ -70,6 +70,7 @@ Please open a pull request
 | ragie.ai                      | ragie.ai                                 | Closed             | https://github.com/ragieai                      | Memory Tool     | Vector        |
 | Ontotext                      | https://www.ontotext.com/                | Closed             | https://github.com/Ontotext-AD                  | Memory Tool     | Graph         |
 | SID                           | https://www.sid.ai/                      | Closed             |                                                 | Memory Tool     | Vector        |
+| Coredence                     | https://coredence.com                    | Closed             | https://github.com/coredence/coredence          | Memory Tool     | SQLite        |
 | vectara                       | https://www.vectara.com/                 | Closed             |                                                 | Storage         | Vector        |
 | arcus                         | arcus.co                                 | Closed             |                                                 | Storage         | Vector        |
 | Oxford Semantic Technologies  | https://www.oxfordsemantic.tech/         | Closed             |                                                 | Storage         | Graph         |
